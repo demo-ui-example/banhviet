@@ -21,8 +21,10 @@
   &-content {
     width: 50%;
     position: absolute;
+    z-index: 3;
     top: 50%;
     left: 40px;
-    transform: translate(-50%);
+    transform: translateY(-50%);
+    color: var(--color-secondary);
   }
 }

@@ -2,8 +2,9 @@
   --color-black: #000;
   --color-white: #fff;
   --color-text: #00ae9f;
-  --color-primary: #fff;
+  --color-primary: #00ae9f;
   --color-secondary: #f8f5e5;
+  --color-text: #414042;
   --font-heading: "SVN-Gratelos Display", sans-serif;
   --font-body: "Matahari", sans-serif;
 }
@@ -11,4 +12,43 @@
 body {
   font-family: var(--font-body);
   color: var(--color-text);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-text {
+  color: var(--color-text);
+}
+
+.h1-font {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 400;
+}
+
+.h2-font {
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 400;
+  font-family: var(--font-heading);
+}
+
+.h2-font {
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 400;
+  font-family: var(--font-heading);
+}
+
+.tag-i {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
 }

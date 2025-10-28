@@ -4,12 +4,13 @@
   left: 0;
   width: 100%;
   z-index: 999;
+  height: 50px;
 }
 
 .header {
   &-logo {
-    width: 50px;
-    height: 50px;
+    width: 117px;
+    height: 24px;
 
     img {
       width: 100%;
@@ -22,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
+    padding: 13px 80px;
     background-color: var(--color-primary);
   }
 
@@ -42,10 +43,16 @@
           transition: all 0.4s;
           color: var(--color-secondary);
           font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
 
-          &.active,
-          &:hover {
+          &.active {
             font-weight: 700;
+            color: var(--color-secondary) !important;
+          }
+
+          &:hover {
+            color: var(--color-white);
           }
         }
       }
@@ -57,7 +64,7 @@
     align-items: center;
     gap: 24px;
 
-    &-search {
+    &__search {
       width: 10px;
       height: 10px;
       display: flex;

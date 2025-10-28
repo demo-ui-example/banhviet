@@ -63,12 +63,28 @@ function categoryProducts() {
     navigation: {
       nextEl: ".product-category .arrow-next",
       prevEl: ".product-category .arrow-prev"
+    }
+  });
+}
+
+function banner() {
+  if ($(".banner-swiper").length < 1) return;
+
+  new Swiper(".banner-swiper", {
+    slidesPerView: 1,
+    loop: false,
+    type: "fade",
+    speed: 800,
+    pagination: {
+      el: ".banner-swiper .swiper-pagination"
     },
+    centeredSlides: true
   });
 }
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
+  banner();
   introProducts();
   featuredProduct();
   categoryProducts();
