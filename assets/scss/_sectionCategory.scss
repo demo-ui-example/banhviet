@@ -1,0 +1,12 @@
+.section-category {
+  padding: 80px 40px;
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- import favicon -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <!-- meta -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- meta -->
+
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/GratelosDisplay/stylesheet.css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/Matahari/stylesheet.css" />
+
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/libs/lenis.css" />
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end meta -->
+    <!-- link custom css page -->
+    <link rel="stylesheet" href="./assets/main/css/style.min.css" />
+    <!-- end link custom css page -->
+    <!-- scrollRestoration -->
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- layout -->
+    <!-- header -->
+    <script>
+      fetch("./components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          const currentPath = window.location.pathname || "/";
+
+          const navLinks = document.querySelectorAll(".header-menu ul>li>a");
+          navLinks.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+
+            // Normalize paths for comparison
+            let normalizedCurrentPath = currentPath;
+            let normalizedLinkPath = linkPath;
+
+            // Remove leading "./" from link path
+            if (normalizedLinkPath.startsWith("./")) {
+              normalizedLinkPath = normalizedLinkPath.substring(1);
+            }
+
+            // For GitHub Pages, get the last segment of the path
+            const currentSegment =
+              normalizedCurrentPath.split("/").pop() || "/";
+            const linkSegment = normalizedLinkPath.split("/").pop() || "/";
+
+            // Check if paths match
+            const isMatch =
+              normalizedLinkPath === normalizedCurrentPath || // Exact match
+              currentSegment === linkSegment || // Segment match
+              (currentPath.endsWith(normalizedLinkPath) &&
+                normalizedLinkPath !== "/") || // Ends with
+              (currentPath === "/" && (linkPath === "/" || linkPath === "./")); // Home page
+
+            if (isMatch) {
+              link.classList.add("active");
+            }
+          });
+        });
+    </script>
+    <header id="header"></header>
+    <!-- end header -->
+    <main>
+      <section class="banner">
+        <div class="container-fluid p-0 banner-container">
+          <div class="banner-image">
+            <img src="./assets/images/draf/banner.webp" alt="" />
+          </div>
+          <div class="banner-content">
+            <h1>Title</h1>
+            <div class="desc">desc</div>
+            <a href="" class="btn--primary">button</a>
+          </div>
+        </div>
+      </section>
+      <section class="intro" style="--bg-section: #fff">
+        <div class="intro-container">
+          <div class="intro-content">
+            <h2>Title</h2>
+            <div class="desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus dignissimos magnam perspiciatis dolores quia sit magni
+              veritatis sed, alias perferendis possimus, expedita, voluptates
+              reprehenderit beatae distinctio iste obcaecati incidunt id.
+            </div>
+            <a href="" class="btn--primary">button</a>
+          </div>
+          <div class="intro-image">
+            <img src="./assets/images/draf/banner.webp" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="intro" style="--bg-section: #f8f5e5">
+        <div class="intro-container">
+          <div class="intro-content">
+            <h2>Title</h2>
+            <div class="desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus dignissimos magnam perspiciatis dolores quia sit magni
+              veritatis sed, alias perferendis possimus, expedita, voluptates
+              reprehenderit beatae distinctio iste obcaecati incidunt id.
+            </div>
+            <a href="" class="btn--primary">button</a>
+          </div>
+          <div class="intro-image">
+            <img src="./assets/images/draf/banner.webp" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="intro-products">
+        <div class="intro-products__container">
+          <h2>Title</h2>
+          <div class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            consequuntur nihil cum possimus vero esse harum. Hic corporis
+            blanditiis, tempora atque voluptas cupiditate porro, suscipit nisi
+            optio dicta, sint eius.
+          </div>
+          <div class="products-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/draf/banner.webp" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/draf/banner.webp" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/draf/banner.webp" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/draf/banner.webp" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/draf/banner.webp" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/draf/banner.webp" alt="" />
+              </div>
+            </div>
+            <div class="swiper-arrows">
+              <div class="arrow-prev">
+                <svg
+                  width="13"
+                  height="18"
+                  viewBox="0 0 13 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    d="M0.455636 16.606L10.929 8.59602L0.455638 0.596016"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+              </div>
+              <div class="arrow-next">
+                <svg
+                  width="13"
+                  height="18"
+                  viewBox="0 0 13 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    d="M0.455636 16.606L10.929 8.59602L0.455638 0.596016"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="back-to-top btn--primary">Back to top</div>
+    </main>
+    <!-- layout -->
+    <!-- footer -->
+    <script>
+      fetch("./components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <footer id="footer"></footer>
+    <!-- end footer -->
+    <!-- end layout -->
+
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <script src="./assets/libs/lenis.min.js"></script>
+    <script src="./assets/libs/gsap.min.js"></script>
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/SplitText.min.js"></script>
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <!-- import custom js -->
+    <script type="module" src="./assets/main/js/script.min.js"></script>
+
+    <!-- end import custom js -->
+  </body>
+</html>
+<!-- https://gsap.com/community/forums/topic/30338-circular-carouselslider/ -->

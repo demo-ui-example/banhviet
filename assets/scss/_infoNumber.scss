@@ -1,0 +1,22 @@
+.list-info-number {
+  padding: 80px;
+
+  .list-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    .item-column {
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          &:not(:last-child) {
+            border-top: 1px solid var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}

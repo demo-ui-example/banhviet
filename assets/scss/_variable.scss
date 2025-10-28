@@ -1,0 +1,14 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-text: #00ae9f;
+  --color-primary: #fff;
+  --color-secondary: #f8f5e5;
+  --font-heading: "SVN-Gratelos Display", sans-serif;
+  --font-body: "Matahari", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+}

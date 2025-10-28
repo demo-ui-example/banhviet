@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Matahari';
+    src: url('Matahari-600SemiBold.eot');
+    src: url('Matahari-600SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Matahari-600SemiBold.woff2') format('woff2'),
+        url('Matahari-600SemiBold.woff') format('woff'),
+        url('Matahari-600SemiBold.ttf') format('truetype'),
+        url('Matahari-600SemiBold.svg#Matahari-600SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matahari';
+    src: url('Matahari-300Light.eot');
+    src: url('Matahari-300Light.eot?#iefix') format('embedded-opentype'),
+        url('Matahari-300Light.woff2') format('woff2'),
+        url('Matahari-300Light.woff') format('woff'),
+        url('Matahari-300Light.ttf') format('truetype'),
+        url('Matahari-300Light.svg#Matahari-300Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matahari';
+    src: url('Matahari-400Regular.eot');
+    src: url('Matahari-400Regular.eot?#iefix') format('embedded-opentype'),
+        url('Matahari-400Regular.woff2') format('woff2'),
+        url('Matahari-400Regular.woff') format('woff'),
+        url('Matahari-400Regular.ttf') format('truetype'),
+        url('Matahari-400Regular.svg#Matahari-400Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matahari';
+    src: url('Matahari-700Bold.eot');
+    src: url('Matahari-700Bold.eot?#iefix') format('embedded-opentype'),
+        url('Matahari-700Bold.woff2') format('woff2'),
+        url('Matahari-700Bold.woff') format('woff'),
+        url('Matahari-700Bold.ttf') format('truetype'),
+        url('Matahari-700Bold.svg#Matahari-700Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
