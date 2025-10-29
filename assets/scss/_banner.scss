@@ -23,7 +23,7 @@
     position: absolute;
     z-index: 3;
     top: 50%;
-    left: 40px;
+    left: 100px;
     transform: translateY(-50%);
     color: var(--color-secondary);
 
@@ -33,6 +33,8 @@
 
     .btn--primary {
       margin-top: 16px;
+      border: none;
+      color: var(--color-white);
     }
   }
 
@@ -49,15 +51,24 @@
   .swiper-pagination {
     display: flex;
     gap: 12px;
+    position: absolute;
+    width: max-content;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
 
     .swiper-pagination-bullet {
-      width: 10px;
-      border-radius: 5px;
-      background-color: rgba($color: #fff, $alpha: 0.5);
+      width: 12px;
+      border-radius: 12px;
+      height: 3px;
+      background-color: var(--color-white);
       transition: all 0.3s ease;
+      margin: 0;
+      opacity: 1;
 
       &.swiper-pagination-bullet-active {
-        width: 20px;
+        width: 26px;
         background-color: var(--color-white);
       }
     }

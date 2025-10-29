@@ -95,9 +95,23 @@
   width: max-content;
   color: #414042;
   background-color: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: var(--color-secondary);
+  }
 
   &.btn--bg-gray {
     background-color: rgba(248, 245, 229, 0.2);
+  }
+
+  &.btn-bg-primary {
+    &:hover {
+      background-color: var(--color-primary);
+      border: 1px solid var(--color-primary);
+      color: var(--color-white);
+    }
   }
 }
 

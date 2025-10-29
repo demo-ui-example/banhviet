@@ -16,9 +16,9 @@ function introProducts() {
 
   new Swiper(".products-swiper", {
     slidesPerView: 5,
-    spaceBetween: 30,
-    loop: false,
-    speed: 800,
+    spaceBetween: 24,
+    loop: true,
+    speed: 600,
     navigation: {
       nextEl: ".products-swiper .arrow-next",
       prevEl: ".products-swiper .arrow-prev"
@@ -73,7 +73,8 @@ function banner() {
   new Swiper(".banner-swiper", {
     slidesPerView: 1,
     loop: false,
-    type: "fade",
+    effect: "fade",
+    loop: true,
     speed: 800,
     pagination: {
       el: ".banner-swiper .swiper-pagination"
