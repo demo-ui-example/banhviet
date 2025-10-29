@@ -4,7 +4,9 @@
   --color-text: #00ae9f;
   --color-primary: #00ae9f;
   --color-secondary: #f8f5e5;
+  --color-third: #005651;
   --color-text: #414042;
+  --color-text-2: #808285;
   --font-heading: "SVN-Gratelos Display", sans-serif;
   --font-body: "Matahari", sans-serif;
 }
@@ -22,8 +24,20 @@ body {
   color: var(--color-secondary);
 }
 
+.color-third {
+  color: var(--color-third);
+}
+
 .color-text {
   color: var(--color-text);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.color-black {
+  color: var(--color-black);
 }
 
 .h1-font {
@@ -40,9 +54,9 @@ body {
   font-family: var(--font-heading);
 }
 
-.h2-font {
-  font-size: 44px;
-  line-height: 52px;
+.h3-font {
+  font-size: 34px;
+  line-height: 40px;
   font-weight: 400;
   font-family: var(--font-heading);
 }
@@ -51,4 +65,10 @@ body {
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
+}
+
+.tag-b {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
 }
