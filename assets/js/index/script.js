@@ -82,12 +82,20 @@ function banner() {
   });
 }
 
+function scrollToTop() {
+  $(".back-to-top").on("click", function (e) {
+    e.preventDefault();
+    lenis.scrollTo(0, { offset: 0, duration: 0.8, easing: (t) => t });
+  });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   banner();
   introProducts();
   featuredProduct();
   categoryProducts();
+  scrollToTop();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

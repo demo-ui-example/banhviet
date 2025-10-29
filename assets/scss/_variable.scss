@@ -61,14 +61,31 @@ body {
   font-family: var(--font-heading);
 }
 
+.b1-font {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.tag-r {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
 .tag-i {
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
+  font-style: italic;
 }
 
 .tag-b {
   font-size: 12px;
   line-height: 16px;
   font-weight: bold;
+}
+
+.spacing-64 {
+  height: 64px;
 }

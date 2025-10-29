@@ -1,0 +1,21 @@
+.intro-products {
+  .section-title {
+    margin: 0 auto;
+    max-width: 480px;
+
+    .desc {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .btn--primary {
+      margin: 16px auto 0;
+      display: block;
+      width: max-content;
+    }
+  }
+
+  .products-swiper {
+    margin-top: 46px;
+  }
+}
