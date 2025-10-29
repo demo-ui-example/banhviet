@@ -1,0 +1,26 @@
+.image-with-text {
+  .section-wrapper {
+    padding: 65px 100px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    .content-left {
+      .list-item {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        li {
+          border-bottom: 1px solid var(--color-primary);
+          padding-bottom: 8px;
+
+          span {
+            color: var(--color-primary);
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}

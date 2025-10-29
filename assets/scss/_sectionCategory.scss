@@ -6,7 +6,12 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 58px;
     margin: 0 auto;
+
+    li {
+      width: 74px;
+      height: 74px;
+    }
   }
 }

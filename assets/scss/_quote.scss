@@ -1,0 +1,36 @@
+.quote {
+  position: relative;
+  padding: 40px 0 40px 50px;
+  background: url("/assets/images/draf/about/bg-quote.webp");
+
+  .title {
+    margin-bottom: 32px;
+    margin-left: 40px;
+  }
+
+  .box {
+    position: relative;
+
+    &-content {
+      min-height: 440px;
+      padding: 40px;
+      margin-right: 50px;
+      border-radius: 20px;
+      background-color: var(--color-white);
+      padding-right: 30%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &-image {
+      height: auto;
+      width: 414px;
+      aspect-ratio: 414 / 564;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .banner {
-  height: 100dvh;
+  height: calc(100dvh - 88px);
   width: 100%;
 
   &-image {
@@ -39,7 +39,7 @@
   }
 
   .swiper-slide {
-    height: 100dvh;
+    height: calc(100dvh - 88px);
 
     img {
       width: 100%;
