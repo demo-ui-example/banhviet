@@ -1,12 +1,19 @@
 .section-news {
+  padding: 64px 100px;
+  background-color: var(--color-white);
+
+  h2.title {
+    margin-bottom: 56px;
+  }
+
   .list-item {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 32px 18px;
     width: 100%;
 
     .news-item {
-      width: calc(calc(100% - 48px) / 3);
+      width: calc(calc(100% - 36px) / 3);
     }
   }
 }
@@ -14,18 +21,43 @@
 .news-item {
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
   border-bottom: 1px solid var(--color-primary);
+  position: relative;
+
+  &:hover {
+    .item-image {
+      img {
+        transform: scale(1.05);
+      }
+    }
+
+    .item-content {
+      background-color: var(--color-secondary);
+    }
+  }
 
   .item-image {
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all 0.4s ease;
     }
   }
 
   .item-content {
-    padding: 16px;
+    padding: 24px 10px;
+    transition: all 0.4s ease0;
+  }
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
   }
 }

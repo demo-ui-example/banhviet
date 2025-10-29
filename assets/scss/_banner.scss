@@ -2,6 +2,14 @@
   height: calc(100dvh - 88px);
   width: 100%;
 
+  &.banner-short {
+    height: 340px;
+
+    .swiper-slide {
+      height: 340px;
+    }
+  }
+
   &-image {
     width: 100%;
     height: 100%;

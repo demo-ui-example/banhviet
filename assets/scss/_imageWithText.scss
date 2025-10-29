@@ -1,4 +1,14 @@
 .image-with-text {
+  position: relative;
+  .image-main {
+    width: 420px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+  }
+
   .section-wrapper {
     padding: 65px 100px;
     display: grid;

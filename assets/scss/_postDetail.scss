@@ -1,7 +1,7 @@
 .post-detail {
   .detail {
     &-banner {
-      height: 640px;
+      height: 340px;
       width: 100%;
 
       img {
@@ -16,21 +16,52 @@
       margin: 0 auto;
       border-radius: 24px;
       overflow: hidden;
-      background-color: var(--color-secondary);
+      background-color: var(--color-white);
 
       display: flex;
       align-items: flex-start;
 
-      padding: 80px;
-      transform: translateY(-80px);
+      padding: 64px;
+      transform: translateY(-64px);
 
       .title {
         width: 40%;
-        padding-right: 40px;
+        padding-right: 20%;
       }
 
       .content {
         width: 60%;
+
+        *:first-child {
+          margin-top: 0;
+        }
+
+        p,
+        ul,
+        ol {
+          margin-top: 16px;
+        }
+
+        h1,
+        h2,
+        h3 {
+          font-size: 44px;
+          line-height: 52px;
+          font-weight: 400;
+          font-family: var(--font-heading);
+          color: var(--color-primary);
+          margin-bottom: 24px;
+        }
+
+        ul {
+          list-style-type: disc;
+          padding-left: 16px;
+        }
+
+        ol {
+          list-style-type: decimal;
+          padding-left: 16px;
+        }
       }
     }
   }
