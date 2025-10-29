@@ -45,8 +45,7 @@ function featuredProduct() {
     loop: false,
     speed: 800,
     pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar"
+      el: ".product-featured-swiper .swiper-pagination"
     },
     centeredSlides: true
   });

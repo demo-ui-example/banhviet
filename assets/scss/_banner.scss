@@ -27,7 +27,8 @@
   }
 
   &-content {
-    width: 50%;
+    width: 100%;
+    max-width: 260px;
     position: absolute;
     z-index: 3;
     top: 50%;
@@ -36,6 +37,10 @@
     color: var(--color-secondary);
 
     .desc {
+      margin-top: 16px;
+    }
+
+    .desc-more {
       margin-top: 16px;
     }
 
