@@ -56,12 +56,23 @@ function categoryProducts() {
 
   new Swiper(".product-category-swiper", {
     slidesPerView: 3.3,
-    spaceBetween: 30,
+    spaceBetween: 10,
     loop: false,
     speed: 800,
     navigation: {
       nextEl: ".product-category .arrow-next",
       prevEl: ".product-category .arrow-prev"
+    },
+    slidesOffsetBefore: 100,
+    breakpoints: {
+      0: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      768: {
+        slidesPerView: 4.5,
+        spaceBetween: 10
+      }
     }
   });
 }
@@ -86,6 +97,39 @@ function scrollToTop() {
   $(".back-to-top").on("click", function (e) {
     e.preventDefault();
     lenis.scrollTo(0, { offset: 0, duration: 0.8, easing: (t) => t });
+  });
+}
+
+function productDetail() {
+  if ($(".product-detail").length < 1) return;
+
+  document.querySelectorAll(".slider-container").forEach((container) => {
+    const thumbs = container.querySelector(".mySwiper");
+    const main = container.querySelector(".mySwiper2");
+
+    // Slider thumbnail
+    const swiperThumbs = new Swiper(thumbs, {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 3,
+      freeMode: true,
+      watchSlidesProgress: true,
+      centeredSlides: true,
+      slideToClickedSlide: true
+    });
+
+    // Slider main
+    const swiperMain = new Swiper(main, {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: container.querySelector(".swiper-button-next"),
+        prevEl: container.querySelector(".swiper-button-prev")
+      },
+      thumbs: {
+        swiper: swiperThumbs
+      }
+    });
   });
 }
 
