@@ -2,6 +2,14 @@
   height: calc(100dvh - 88px);
   width: 100%;
 
+  &.is-home {
+    height: calc(100dvh - 60px);
+
+    .swiper-slide {
+      height: calc(100dvh - 60px);
+    }
+  }
+
   &.banner-short {
     height: 340px;
 

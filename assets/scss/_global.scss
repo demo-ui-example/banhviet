@@ -90,7 +90,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-black);
-  padding: 9px 12px;
+  padding: 12px 14px 9px;
   border-radius: 5px;
   width: max-content;
   color: #414042;
@@ -99,18 +99,17 @@
   transition: all 0.4s ease;
 
   &:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-white);
   }
 
   &.btn--bg-gray {
     background-color: rgba(248, 245, 229, 0.2);
-  }
 
-  &.btn-bg-primary {
     &:hover {
-      background-color: var(--color-primary);
-      border: 1px solid var(--color-primary);
-      color: var(--color-white);
+      background-color: var(--color-white);
+      color: var(--color-primary);
     }
   }
 }
@@ -161,13 +160,14 @@
   justify-content: center;
   color: var(--color-third);
   gap: 12px;
-  padding: 10px 10px 8px;
+  padding: 12px 10px 8px;
   width: 100%;
   background-color: var(--color-white);
   margin-bottom: 0;
-  font-size: 10px;
+  font-size: 12px;
 
   a {
+    transition: all 0.4s ease;
     &:hover {
       color: var(--color-primary);
     }

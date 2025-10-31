@@ -69,12 +69,18 @@
     gap: 24px;
 
     &__search {
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--color-secondary);
+      cursor: pointer;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 }
