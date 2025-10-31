@@ -103,7 +103,7 @@ function scrollToTop() {
 function productDetail() {
   if ($(".product-detail").length < 1) return;
 
-  document.querySelectorAll(".slider-container").forEach((container) => {
+  document.querySelectorAll(".gallery").forEach((container) => {
     const thumbs = container.querySelector(".mySwiper");
     const main = container.querySelector(".mySwiper2");
 
@@ -131,6 +131,19 @@ function productDetail() {
       }
     });
   });
+
+  const galleryProduct = $(".product-detail .gallery");
+  const variantButtonProduct = $(".product-detail .variant-item");
+  variantButtonProduct.on("click", function (e) {
+    e.preventDefault();
+
+    const thisVariant = $(this);
+    const dataThisVariant = thisVariant.data("variant");
+    galleryProduct.removeClass("show");
+    $(`.product-detail .gallery[data-variant="${dataThisVariant}"`).addClass(
+      "show"
+    );
+  });
 }
 
 const init = () => {
@@ -140,6 +153,7 @@ const init = () => {
   featuredProduct();
   categoryProducts();
   scrollToTop();
+  productDetail();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

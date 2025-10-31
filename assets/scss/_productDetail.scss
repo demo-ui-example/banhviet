@@ -94,5 +94,123 @@
         }
       }
     }
+
+    .detail {
+      position: relative;
+
+      .tag {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 8px;
+        border-radius: 10px;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+    }
+
+    .gallery {
+      padding: 24px 30px;
+      border-radius: 20px;
+      background-color: var(--color-white);
+      width: 100%;
+      aspect-ratio: 1;
+
+      &-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+
+        &.show {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    .variant {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+
+      .variant-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .btn--contact {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* --- Slider main --- */
+    .mySwiper2 {
+      width: 100%;
+      height: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mySwiper2 .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #111;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      color: #00ae9f;
+    }
+
+    /* --- Slider thumbnail --- */
+    .thumbnail-slider {
+      margin-top: 15px;
+      height: 100px;
+    }
+
+    .thumbnail-slider .swiper-slide {
+      width: 100px;
+      height: 100px;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .thumbnail-slider .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnail-slider .swiper-slide-thumb-active {
+      opacity: 1;
+      border: 3px solid #00ae9f;
+    }
   }
 }
