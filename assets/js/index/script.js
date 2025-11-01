@@ -286,6 +286,7 @@ function getNewletter() {
 function searchForm() {
   $(".header-cta__search--icon").on("click", function (e) {
     e.stopPropagation();
+    $(this).toggleClass("open");
     $(".header-cta__search--form").toggleClass("open");
   });
 
@@ -294,7 +295,9 @@ function searchForm() {
   });
 
   $(document).on("click", function () {
-    $(".header-cta__search--form").removeClass("open");
+    $(".header-cta__search--form, .header-cta__search--icon").removeClass(
+      "open"
+    );
   });
 }
 

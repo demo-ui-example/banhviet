@@ -47,14 +47,16 @@
     display: flex;
     gap: 12px;
     position: relative;
+    width: max-content;
 
     &::after {
-      width: 150px;
+      content: "";
+      width: 230px;
       height: 1px;
       background-color: var(--color-third);
       position: absolute;
       bottom: 0;
-      right: -4px;
+      left: calc(100% + 10px);
     }
 
     li {

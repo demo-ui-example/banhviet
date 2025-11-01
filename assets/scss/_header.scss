@@ -81,6 +81,20 @@
           width: 14px;
           height: 14px;
         }
+
+        .icon-close {
+          display: none;
+        }
+
+        &.open {
+          .icon-search {
+            display: none;
+          }
+
+          .icon-close {
+            display: block;
+          }
+        }
       }
 
       &--form {
@@ -119,13 +133,14 @@
         }
 
         input {
-          font-size: 16px;
-          line-height: 20px;
+          font-size: 14px;
+          line-height: 18px;
           font-weight: 400;
-          color: var(--color-black);
+          color: var(--color-third);
           height: 45px;
+          width: 100%;
           border: none;
-          padding: 8px 10px 5px;
+          padding: 7px 16px 5px;
 
           &::placeholder {
             color: var(--color-text-2);
@@ -140,10 +155,16 @@
           justify-content: center;
           border: none;
           box-shadow: none;
+          color: var(--color-third);
 
           position: absolute;
           right: 0;
           top: 0;
+
+          svg {
+            width: 14px;
+            height: 14px;
+          }
         }
       }
     }
