@@ -46,28 +46,28 @@ body,
 
 .h1-font {
   font-family: var(--font-heading);
-  font-size: 64px;
-  line-height: 72px;
+  font-size: 80px;
+  line-height: 81px;
   font-weight: 400;
 }
 
 .h2-font {
+  font-size: 64px;
+  line-height: 68px;
+  font-weight: 400;
+  font-family: var(--font-heading);
+}
+
+.h3-font {
   font-size: 44px;
   line-height: 52px;
   font-weight: 400;
   font-family: var(--font-heading);
 }
 
-.h3-font {
-  font-size: 34px;
-  line-height: 40px;
-  font-weight: 400;
-  font-family: var(--font-heading);
-}
-
 .h4-font {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 28px;
+  line-height: 32px;
   font-weight: 700;
   font-family: var(--font-body);
 }

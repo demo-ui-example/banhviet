@@ -36,7 +36,7 @@
 
   &-content {
     width: 100%;
-    max-width: 260px;
+    max-width: 400px;
     position: absolute;
     z-index: 3;
     top: 50%;
@@ -52,8 +52,11 @@
       margin-top: 16px;
     }
 
-    .btn--primary {
+    .btn-wrapper {
       margin-top: 16px;
+    }
+
+    .btn--primary {
       border: none;
       color: var(--color-white);
     }

@@ -46,28 +46,28 @@ body,
 
 .h1-font {
   font-family: var(--font-heading);
-  font-size: 64px;
-  line-height: 72px;
+  font-size: 80px;
+  line-height: 81px;
   font-weight: 400;
 }
 
 .h2-font {
+  font-size: 64px;
+  line-height: 68px;
+  font-weight: 400;
+  font-family: var(--font-heading);
+}
+
+.h3-font {
   font-size: 44px;
   line-height: 52px;
   font-weight: 400;
   font-family: var(--font-heading);
 }
 
-.h3-font {
-  font-size: 34px;
-  line-height: 40px;
-  font-weight: 400;
-  font-family: var(--font-heading);
-}
-
 .h4-font {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 28px;
+  line-height: 32px;
   font-weight: 700;
   font-family: var(--font-body);
 }
@@ -517,7 +517,7 @@ body {
   box-shadow: unset;
   border-radius: unset;
   background-color: var(--color-white);
-  padding: 5px 10px;
+  padding: 8px 10px 5px;
   border-radius: 5px;
   overflow: hidden;
   color: var(--color-third);
@@ -562,7 +562,7 @@ body {
 }
 .banner-content {
   width: 100%;
-  max-width: 260px;
+  max-width: 400px;
   position: absolute;
   z-index: 3;
   top: 50%;
@@ -576,8 +576,10 @@ body {
 .banner-content .desc-more {
   margin-top: 16px;
 }
-.banner-content .btn--primary {
+.banner-content .btn-wrapper {
   margin-top: 16px;
+}
+.banner-content .btn--primary {
   border: none;
   color: var(--color-white);
 }
@@ -632,6 +634,7 @@ body {
 .intro-column {
   background-color: var(--color-white);
   margin-bottom: 54px;
+  overflow: hidden;
 }
 .intro-column .content {
   display: flex;
@@ -762,7 +765,7 @@ body {
 }
 .news-item .item-content {
   padding: 24px 10px;
-  transition: all 0.4s ease0;
+  transition: all 0.4s ease;
 }
 .news-item a {
   position: absolute;
@@ -916,7 +919,7 @@ body {
 }
 .product-featured .swiper-slide img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 566/381;
   object-fit: cover;
   transition: all 0.4s ease;
 }
@@ -1197,8 +1200,11 @@ body {
   margin-top: 16px;
   text-align: center;
 }
+.intro-content .btn-wrapper {
+  margin-top: 16px;
+}
 .intro-content .btn--primary {
-  margin: 16px auto 0;
+  margin: 0 auto;
   display: block;
   width: max-content;
 }
@@ -1218,6 +1224,17 @@ body {
 }
 .intro-products__container {
   padding: 64px 0;
+  position: relative;
+}
+.intro-products__container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  height: 3px;
+  background-color: var(--color-primary);
 }
 .intro-products .section-title {
   margin: 0 auto;
@@ -1242,7 +1259,7 @@ body {
   top: 0;
   left: 0;
   width: 80px;
-  height: 100%;
+  height: calc(100% - 40px);
   background-color: #f5f5f7;
   z-index: 2;
 }

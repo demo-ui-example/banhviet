@@ -146,6 +146,85 @@ function productDetail() {
   });
 }
 
+function animation() {
+  gsap.utils
+    .toArray(".data-fade-in, .data-fade-in-auto, data-fade-list")
+    .forEach((element) => {
+      const isMobile = window.innerWidth < 768;
+      const disableMobile = element.hasAttribute("data-disable-mobile");
+      if (disableMobile) return;
+
+      let posOffset = element.getAttribute("data-offset") || "70%";
+      let delay = parseFloat(element.getAttribute("data-delay")) || 0;
+      let duration = parseFloat(element.getAttribute("data-duration")) || 1;
+
+      if (element.classList.contains("data-fade-in-auto")) {
+        gsap.fromTo(
+          element,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            delay: delay,
+            duration: duration,
+            ease: "power1.out"
+          }
+        );
+        return;
+      }
+
+      if (element.classList.contains("data-fade-list")) {
+        const items = element.querySelectorAll(".data-fade-list-item");
+        if (!items.length) return;
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: `top ${posOffset}`,
+            end: `bottom ${posOffset}`,
+            // markers: true,
+            once: true // chỉ chạy 1 lần
+          }
+        });
+
+        items.forEach((item, i) => {
+          tl.fromTo(
+            item,
+            { opacity: 0, y: 20 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: duration,
+              ease: "power1.out"
+            },
+            delay + i * 0.2
+          );
+        });
+
+        return;
+      }
+
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          delay: delay,
+          duration: duration,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: element,
+            start: `top ${posOffset}`,
+            end: `bottom ${posOffset}`
+            // toggleActions: "play none none reverse"
+            // markers: true
+          }
+        }
+      );
+    });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   banner();
@@ -154,6 +233,7 @@ const init = () => {
   categoryProducts();
   scrollToTop();
   productDetail();
+  animation();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body
