@@ -76,10 +76,66 @@
       justify-content: center;
       color: var(--color-secondary);
       cursor: pointer;
+      position: relative;
 
-      svg {
-        width: 14px;
-        height: 14px;
+      &--icon {
+        svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
+      &--form {
+        background-color: var(--color-white);
+
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        top: calc(100% + 15px);
+        min-width: 310px;
+        max-width: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 101;
+
+        &::after {
+          content: "";
+          -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          right: 0;
+          bottom: calc(100% - 2px);
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          z-index: 101;
+          background-color: var(--color-white);
+        }
+
+        input {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 400;
+          color: var(--color-black);
+          height: 45px;
+          border: none;
+          padding: 8px 10px 5px;
+
+          &::placeholder {
+            color: var(--color-text);
+          }
+        }
+
+        button {
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          box-shadow: none;
+
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
       }
     }
   }
