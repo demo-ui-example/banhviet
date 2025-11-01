@@ -82,7 +82,7 @@
     <!-- end header -->
     <main>
       <div class="breadcrumb">
-        <a href="/.products.html">Sản phẩm</a>
+        <a href="/category.html">Sản phẩm</a>
         <span class="separator"></span>
         <a href="#">BV Fresh</a>
         <span class="separator"></span>
@@ -113,7 +113,7 @@
               </p>
             </div>
           </div>
-          <div class="product-detail__ingredients">
+          <div class="product-detail__ingredients data-fade-in">
             <div class="image">
               <img src="./assets/images/draf/ingredient.png" alt="" />
             </div>
@@ -137,57 +137,83 @@
             </div>
           </div>
           <div class="product-detail__main">
-            <div class="different">
+            <div class="different data-fade-in">
               <h2 class="title h2-font color-primary">Sự khác biệt</h2>
               <ul class="list-item">
                 <li>
-                  <div class="icon">icon</div>
-                  <div class="text">text</div>
+                  <div class="icon">
+                    <img
+                      src="./assets/images/draf/product-detail/1.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text b1-font color-text">Không gaz</div>
                 </li>
                 <li>
-                  <div class="icon">icon</div>
-                  <div class="text">text</div>
+                  <div class="icon">
+                    <img
+                      src="./assets/images/draf/product-detail/2.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text b1-font color-text">
+                    Không chất <br />tạo màu
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/images/draf/product-detail/3.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text b1-font color-text">Không caffeine</div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/images/draf/product-detail/4.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text b1-font color-text">
+                    Không chất <br />bảo quản
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/images/draf/product-detail/5.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text b1-font color-text">
+                    Không đường <br />
+                    hoá học
+                  </div>
                 </li>
               </ul>
             </div>
-            <div class="detail">
+            <div class="detail data-fade-in">
               <div class="gallery">
                 <div class="gallery-item show" data-variant="1">
                   <div class="swiper mySwiper2">
                     <div class="swiper-wrapper main">
                       <div class="swiper-slide">
                         <img
-                          src="./assets/images/draf/banner.webp"
+                          src="./assets/images/draf/product-detail/product-main.png"
                           alt="Image"
                         />
                       </div>
                       <div class="swiper-slide">
                         <img
-                          src="./assets/images/draf/banner.webp"
+                          src="./assets/images/draf/product-detail/product-main.png"
                           alt="Image"
                         />
                       </div>
                       <div class="swiper-slide">
                         <img
-                          src="./assets/images/draf/banner.webp"
-                          alt="Image"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="./assets/images/draf/banner.webp"
-                          alt="Image"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="./assets/images/draf/banner.webp"
-                          alt="Image"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="./assets/images/draf/banner.webp"
+                          src="./assets/images/draf/product-detail/product-main.png"
                           alt="Image"
                         />
                       </div>
@@ -215,28 +241,10 @@
                           alt="Image"
                         />
                       </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="./assets/images/draf/banner.webp"
-                          alt="Image"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="./assets/images/draf/banner.webp"
-                          alt="Image"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="./assets/images/draf/banner.webp"
-                          alt="Image"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="gallery-item" data-variant="2">
+                <div class="gallery-item d-none" data-variant="2">
                   <div class="swiper mySwiper2">
                     <div class="swiper-wrapper main">
                       <div class="swiper-slide">
@@ -322,27 +330,45 @@
                 </div>
               </div>
 
-              <div class="tag">
-                <div class="percent">8%</div>
-                <div class="info">Đây là thông tin chi tiết</div>
-              </div>
+              <div class="detail-cta">
+                <div class="tag">
+                  <div class="percent h1-font color-primary">8%</div>
+                  <div class="info color-primary tag-i">
+                    Đơn hàng <br />đầu tiên
+                  </div>
+                </div>
 
-              <div class="variant">
-                <div class="variant-item active" data-variant="1">800ml</div>
-                <div class="variant-item" data-variant="2">1000ml</div>
+                <div class="variant">
+                  <div
+                    class="variant-item active b1-font color-third"
+                    data-variant="1"
+                  >
+                    <span>400ml</span>
+                  </div>
+                  <div
+                    class="variant-item b1-font color-third"
+                    data-variant="2"
+                  >
+                    <span>300ml</span>
+                  </div>
+                </div>
+                <div class="contact-wrapper">
+                  <a href="#" class="btn--contact tag-b"
+                    ><span>Liên hệ</span></a
+                  >
+                </div>
               </div>
-              <a href="#" class="btn--contact">Liên hệ</a>
             </div>
           </div>
         </div>
       </section>
       <section class="list-info-number">
         <div class="container-fluid p-0">
-          <h2 class="title h2-font color-primary text-center">
+          <h2 class="title h2-font color-primary text-center data-fade-in">
             Chính sách bán hàng <br />
             cho đại lý phân phối
           </h2>
-          <div class="list-item">
+          <div class="list-item data-fade-in">
             <div class="item-left item-column b1-font color-text">
               <ul>
                 <li>
@@ -400,13 +426,15 @@
       <section class="intro-products">
         <div class="intro-products__container">
           <div class="section-title">
-            <h2 class="h2-font text-center color-primary">Lựa chọn của bạn</h2>
-            <div class="desc text-center b1-font color-text">
+            <h2 class="h2-font text-center color-primary data-fade-in">
+              Lựa chọn của bạn
+            </h2>
+            <div class="desc text-center b1-font color-text data-fade-in">
               Và không chỉ có nước, Bánh Việt còn rất nhiều các sản phẩm bánh
               khác, bánh Flan, bánh Quẩy...
             </div>
           </div>
-          <div class="products-swiper swiper">
+          <div class="products-swiper swiper data-fade-in">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="./assets/images/draf/home/product1.png" alt="" />

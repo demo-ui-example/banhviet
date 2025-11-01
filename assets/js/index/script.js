@@ -111,7 +111,7 @@ function productDetail() {
     const swiperThumbs = new Swiper(thumbs, {
       loop: true,
       spaceBetween: 10,
-      slidesPerView: 3,
+      slidesPerView: "auto",
       freeMode: true,
       watchSlidesProgress: true,
       centeredSlides: true,
@@ -139,10 +139,16 @@ function productDetail() {
 
     const thisVariant = $(this);
     const dataThisVariant = thisVariant.data("variant");
-    galleryProduct.removeClass("show");
-    $(`.product-detail .gallery[data-variant="${dataThisVariant}"`).addClass(
-      "show"
-    );
+
+    variantButtonProduct.removeClass("active");
+    $(
+      `.product-detail .variant-item[data-variant="${dataThisVariant}"`
+    ).addClass("active");
+
+    // galleryProduct.removeClass("show");
+    // $(`.product-detail .gallery[data-variant="${dataThisVariant}"`).addClass(
+    //   "show"
+    // );
   });
 }
 
@@ -225,6 +231,73 @@ function animation() {
     });
 }
 
+function getNewletter() {
+  $("#form-newletter").on("submit", function (e) {
+    e.preventDefault();
+
+    const thisForm = $(this);
+    const emailField = thisForm.find("input[type='email']");
+
+    emailField.removeClass("error");
+    thisForm.siblings("span").remove();
+
+    if (!emailField.length) {
+      console.error("Không tìm thấy input email trong form.");
+      return;
+    }
+
+    const email = emailField.val() ? emailField.val().trim() : "";
+
+    if (!email) {
+      emailField.addClass("error");
+      return;
+    }
+
+    $.ajax({
+      type: "POST",
+      url: ajaxUrl,
+      data: {
+        action: "vias_receive_newletter",
+        email: email
+      },
+      beforeSend: function () {
+        console.log("Đang gửi dữ liệu...");
+      },
+      success: function (res) {
+        thisForm[0].reset();
+        thisForm.addClass("d-none");
+        thisForm.after(
+          '<span class="contact-message b3-font d-block color-white" style=" max-width: 235px; margin-top: 16px;">We have received your information, thank you for registering.</span>'
+        );
+
+        setTimeout(() => {
+          thisForm.siblings(".contact-message").remove();
+          thisForm.removeClass("d-none");
+        }, 5000);
+      },
+      error: function (xhr, status, error) {
+        console.error("Lỗi khi gửi form:", error);
+        alert("Có lỗi xảy ra, vui lòng thử lại sau.");
+      }
+    });
+  });
+}
+
+function searchForm() {
+  $(".header-cta__search--icon").on("click", function (e) {
+    e.stopPropagation();
+    $(".header-cta__search--form").toggleClass("open");
+  });
+
+  $(".header-cta__search--form").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $(document).on("click", function () {
+    $(".header-cta__search--form").removeClass("open");
+  });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   banner();
@@ -234,6 +307,7 @@ const init = () => {
   scrollToTop();
   productDetail();
   animation();
+  searchForm();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

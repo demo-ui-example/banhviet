@@ -46,17 +46,15 @@
           position: relative;
           transition: all 0.4s;
           color: var(--color-secondary);
-          font-weight: 400;
+          font-weight: 700;
           font-size: 14px;
           line-height: 20px;
+          opacity: 0.8;
 
-          &.active {
-            font-weight: 700;
-            color: var(--color-secondary) !important;
-          }
-
+          &.active,
           &:hover {
-            color: var(--color-white);
+            color: var(--color-secondary) !important;
+            opacity: 1;
           }
         }
       }
@@ -95,6 +93,17 @@
         position: absolute;
         right: 0;
         z-index: 101;
+
+        transform: translateY(10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s ease;
+
+        &.open {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: auto;
+        }
 
         &::after {
           content: "";

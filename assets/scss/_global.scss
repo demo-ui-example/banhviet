@@ -164,22 +164,24 @@
   width: 100%;
   background-color: var(--color-white);
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
 
   a:first-child {
-    padding-left: 15px;
+    padding-left: 20px;
+    position: relative;
 
     &::before {
       content: "";
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
       position: absolute;
       background: url("/assets/images/icon-signature.svg");
       background-position: center;
-      background-size: contain;
-      left: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: -2px;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(calc(calc(-1px) - 50%));
     }
   }
 
@@ -189,6 +191,7 @@
     background: url("/assets/images/icon-arrow.svg");
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   a {

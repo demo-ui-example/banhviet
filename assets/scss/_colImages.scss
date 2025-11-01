@@ -48,6 +48,15 @@
         border-radius: 10px;
         overflow: hidden;
         max-height: 400px;
+        transition: all 0.4s ease;
+
+        &:hover {
+          transform: scale(0.95);
+
+          img {
+            transform: scale(1.1);
+          }
+        }
       }
     }
 
@@ -78,14 +87,18 @@
           inset: 0;
         }
 
+        .desc {
+          margin-top: 8px;
+        }
+
         img {
-          height: 120%;
+          height: 110%;
           object-fit: cover;
         }
 
         &:hover {
           img {
-            transform: translateY(-10%);
+            transform: translateY(-8%);
           }
         }
       }
