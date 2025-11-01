@@ -343,7 +343,7 @@ body {
   width: 14px;
   height: 14px;
   position: absolute;
-  background: url("/assets/images/icon-signature.svg");
+  background: url("./assets/images/icon-signature.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -354,7 +354,7 @@ body {
 .breadcrumb .separator {
   width: 5px;
   height: 12px;
-  background: url("/assets/images/icon-arrow.svg");
+  background: url("./assets/images/icon-arrow.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -808,7 +808,7 @@ body {
 .quote {
   position: relative;
   padding: 40px 0 40px 50px;
-  background: url("/assets/images/draf/about/bg-quote.webp");
+  background: url("./assets/images/draf/about/bg-quote.webp");
 }
 .quote .title {
   margin-bottom: 32px;
@@ -1253,7 +1253,7 @@ body {
 }
 .policy-banner .title {
   text-align: center;
-  padding: 64px 0;
+  padding: 80px 0 64px;
 }
 .policy-main {
   max-width: 760px;
@@ -1507,7 +1507,7 @@ body {
 }
 
 .product-detail {
-  background: url("/assets/images/draf/bg-product-detail.png");
+  background: url("./assets/images/draf/bg-product-detail.png");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;

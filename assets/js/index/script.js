@@ -114,7 +114,7 @@ function productDetail() {
       slidesPerView: "auto",
       freeMode: true,
       watchSlidesProgress: true,
-      centeredSlides: true,
+      centeredSlides: false,
       slideToClickedSlide: true
     });
 
