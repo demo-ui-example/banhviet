@@ -166,6 +166,31 @@
   margin-bottom: 0;
   font-size: 12px;
 
+  a:first-child {
+    padding-left: 15px;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: url("/assets/images/icon-signature.svg");
+      background-position: center;
+      background-size: contain;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .separator {
+    width: 5px;
+    height: 12px;
+    background: url("/assets/images/icon-arrow.svg");
+    background-size: contain;
+    background-position: center;
+  }
+
   a {
     transition: all 0.4s ease;
     &:hover {
