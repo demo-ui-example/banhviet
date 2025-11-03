@@ -23,6 +23,15 @@
       &:not(:last-child) {
         margin-bottom: 8px;
       }
+
+      &.name {
+        letter-spacing: 0.96px;
+      }
+
+      &.address {
+        font-style: italic;
+        font-weight: 300;
+      }
     }
   }
 

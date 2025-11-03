@@ -46,54 +46,67 @@ body,
 
 .h1-font {
   font-family: var(--font-heading);
-  font-size: 80px;
-  line-height: 81px;
+  font-size: 64px;
+  line-height: 72px;
   font-weight: 400;
 }
 
 .h2-font {
-  font-size: 64px;
-  line-height: 68px;
-  font-weight: 400;
-  font-family: var(--font-heading);
-}
-
-.h3-font {
-  font-size: 44px;
+  font-size: 48px;
   line-height: 52px;
   font-weight: 400;
   font-family: var(--font-heading);
 }
 
+.h3-font {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: var(--font-heading);
+}
+
 .h4-font {
-  font-size: 28px;
-  line-height: 32px;
-  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: var(--font-body);
+}
+
+.h4-bold-font {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 800;
   font-family: var(--font-body);
 }
 
 .b1-font {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
 }
 
-.tag-r {
+.b1-bold-font {
   font-size: 14px;
-  line-height: 22px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.tag-r {
+  font-size: 12px;
+  line-height: 14px;
   font-weight: 400;
 }
 
 .tag-i {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 14px;
   font-weight: 400;
   font-style: italic;
 }
 
 .tag-b {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 14px;
   font-weight: bold;
 }
 

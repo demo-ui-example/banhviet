@@ -5,10 +5,19 @@
   background-repeat: no-repeat;
 
   &__banner {
-    padding: 80px 100px 40px;
+    padding: 80px 160px 40px;
+
+    h1 {
+      font-family: var(--font-body);
+      font-weight: 800;
+    }
+
+    .subtitle {
+      color: rgba($color: #414042, $alpha: 0.3);
+    }
 
     .title {
-      margin-top: 16px;
+      margin-top: 8px;
     }
 
     .image {
@@ -41,7 +50,7 @@
   }
 
   &__ingredients {
-    width: calc(100% - 200px);
+    width: calc(100% - 320px);
     margin: 0 auto;
     align-items: center;
     display: grid;
@@ -67,20 +76,32 @@
       padding: 24px 0;
       border-top: 1px solid var(--color-text);
       border-bottom: 1px solid var(--color-text);
+
+      p {
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+
+        span {
+          font-weight: bold;
+        }
+      }
     }
   }
 
   &__main {
-    padding: 80px 100px;
-    display: grid;
-    grid-template-columns: 30% 70%;
+    padding: 80px 160px;
+    // display: grid;
+    // grid-template-columns: 30% 70%;
+    display: flex;
     gap: 50px;
 
     .different {
       padding: 24px 30px;
       border-radius: 20px;
       background-color: var(--color-white);
-      box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
+      // box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
+      width: 30%;
 
       .list-item {
         margin-top: 24px;
@@ -115,6 +136,7 @@
 
     .detail {
       position: relative;
+      width: calc(70% - 50px);
 
       .tag {
         display: flex;
@@ -178,7 +200,7 @@
         }
 
         .contact-wrapper {
-          border-bottom: 1px solid var(--color-primary);
+          border-bottom: 2px solid var(--color-primary);
         }
 
         .btn--contact {
@@ -224,7 +246,7 @@
       background-color: var(--color-white);
       width: 100%;
       // aspect-ratio: 1;
-      box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
+      // box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
       padding: 20px;
 
       &-item {

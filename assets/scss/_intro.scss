@@ -2,7 +2,11 @@
   background: var(--bg-section);
 
   &-container {
-    padding: 64px 50px;
+    padding: 64px 160px;
+
+    @media (min-width: 1920px) {
+      padding: 64px 200px;
+    }
   }
 
   &-content {

@@ -3,10 +3,10 @@
   width: 100%;
 
   &.is-home {
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 50px);
 
     .swiper-slide {
-      height: calc(100dvh - 60px);
+      height: calc(100dvh - 50px);
     }
   }
 
@@ -36,13 +36,18 @@
 
   &-content {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     position: absolute;
     z-index: 3;
     top: 50%;
-    left: 100px;
+    left: 160px;
     transform: translateY(-50%);
     color: var(--color-secondary);
+
+    h1 {
+      font-family: var(--font-body);
+      font-weight: 800;
+    }
 
     .desc {
       margin-top: 16px;

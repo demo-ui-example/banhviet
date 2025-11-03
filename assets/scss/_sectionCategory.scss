@@ -1,5 +1,9 @@
 .section-category {
-  padding: 80px 40px;
+  background-color: #f5f5f7;
+  padding: 48px 40px;
+  position: sticky;
+  z-index: 10;
+  top: 83px;
 
   .list-item {
     display: flex;

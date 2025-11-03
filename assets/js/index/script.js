@@ -42,10 +42,14 @@ function featuredProduct() {
   new Swiper(".product-featured-swiper", {
     slidesPerView: 1.5,
     spaceBetween: 30,
-    loop: false,
+    loop: true,
     speed: 800,
     pagination: {
       el: ".product-featured-swiper .swiper-pagination"
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
     },
     centeredSlides: true
   });
@@ -62,6 +66,10 @@ function categoryProducts() {
     navigation: {
       nextEl: ".product-category .arrow-next",
       prevEl: ".product-category .arrow-prev"
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
     },
     slidesOffsetBefore: 100,
     breakpoints: {
