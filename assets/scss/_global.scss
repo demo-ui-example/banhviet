@@ -151,7 +151,7 @@
 }
 
 .breadcrumb {
-  position: fixed;
+  position: sticky;
   z-index: 100;
   top: 50px;
   left: 0;
@@ -165,7 +165,7 @@
   width: 100%;
   background-color: var(--color-white);
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
 
   a:first-child {
@@ -190,7 +190,7 @@
   }
 
   .separator {
-    width: 5px;
+    width: 4px;
     height: 12px;
     background: url("../../images/icon-arrow.svg");
     background-size: contain;
