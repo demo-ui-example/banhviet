@@ -151,8 +151,8 @@
 
         position: absolute;
         z-index: 3;
-        top: 16px;
-        right: 16px;
+        top: 40px;
+        right: 40px;
         text-align: center;
       }
 
@@ -210,6 +210,7 @@
           overflow: hidden;
           position: relative;
           cursor: pointer;
+          color: var(--color-third);
 
           span {
             position: relative;
@@ -247,7 +248,7 @@
       width: 100%;
       // aspect-ratio: 1;
       // box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
-      padding: 20px;
+      padding: 40px;
 
       &-item {
         position: relative;
@@ -327,7 +328,7 @@
     /* --- Slider thumbnail --- */
     .thumbnail-slider {
       margin-top: 15px;
-      height: 40px;
+      height: 55px;
       margin-right: 0 !important;
       width: 30%;
 
@@ -337,8 +338,8 @@
     }
 
     .thumbnail-slider .swiper-slide {
-      width: 40px;
-      height: 40px;
+      width: 55px;
+      height: 55px;
       opacity: 0.5;
       transition: all 0.3s ease;
       cursor: pointer;

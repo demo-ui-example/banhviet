@@ -23,15 +23,16 @@
 
     &-right {
       width: calc(70% - 50px);
-      &:first-child {
-        margin-top: 0;
-      }
 
       * {
         font-size: 14px;
         line-height: 18px;
         font-weight: 400;
         margin-top: 16px;
+
+        &:first-child {
+          margin-top: 0;
+        }
       }
 
       h1,

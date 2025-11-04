@@ -40,7 +40,7 @@ function featuredProduct() {
   if ($(".product-featured").length < 1) return;
 
   new Swiper(".product-featured-swiper", {
-    slidesPerView: 1.5,
+    slidesPerView: 2.5,
     spaceBetween: 30,
     loop: true,
     speed: 800,

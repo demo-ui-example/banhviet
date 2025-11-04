@@ -5,6 +5,7 @@
   width: 100%;
   z-index: 999;
   height: 50px;
+  background-color: var(--color-primary);
 
   & + .blank-spacing {
     height: 50px;
@@ -28,7 +29,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 13px 160px;
-    background-color: var(--color-primary);
   }
 
   &-menu {

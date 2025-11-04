@@ -70,6 +70,11 @@ body,
   line-height: 20px;
   font-weight: 400;
   font-family: var(--font-body);
+
+  @media (min-width: 1441px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .h4-bold-font {
@@ -77,6 +82,11 @@ body,
   line-height: 22px;
   font-weight: 800;
   font-family: var(--font-body);
+
+  @media (min-width: 1441px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .b1-font {
