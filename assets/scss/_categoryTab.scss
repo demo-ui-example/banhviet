@@ -13,6 +13,10 @@
     gap: 24px;
     padding: 14px;
 
+    @media (max-width: 991px) {
+      padding: 5px;
+    }
+
     .category-item {
       width: 65px;
       height: 65px;

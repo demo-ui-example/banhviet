@@ -1,6 +1,10 @@
 .product-featured {
   padding: 64px 0;
 
+  @media (max-width: 991px) {
+    padding: 48px 0;
+  }
+
   h2.title {
     margin-bottom: 16px;
   }
@@ -45,6 +49,10 @@
     position: unset;
     width: max-content;
     margin: 40px auto 0;
+
+    @media (max-width: 991px) {
+      margin: 32px auto 0;
+    }
 
     .swiper-pagination-bullet {
       width: 4px;

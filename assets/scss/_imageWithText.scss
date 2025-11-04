@@ -2,6 +2,10 @@
   position: relative;
   min-height: 550px;
 
+  @media (max-width: 991px) {
+    min-height: unset;
+  }
+
   .image-main {
     width: 420px;
     height: auto;
@@ -9,6 +13,12 @@
     bottom: 0;
     right: 0;
     z-index: 3;
+
+    @media (max-width: 991px) {
+      width: 150px;
+      top: 0;
+      bottom: unset;
+    }
   }
 
   .section-wrapper {
@@ -16,12 +26,27 @@
     display: grid;
     grid-template-columns: 60% 40%;
 
+    @media (max-width: 991px) {
+      padding: 8px 24px 48px;
+      grid-template-columns: 1fr;
+    }
+
     .content-left {
+      .title {
+        @media (max-width: 991px) {
+          width: 60%;
+        }
+      }
       .list-item {
         margin-top: 40px;
         display: flex;
         flex-direction: column;
         gap: 40px;
+
+        @media (max-width: 991px) {
+          margin-top: 80px;
+          gap: 24px;
+        }
 
         li {
           border-bottom: 1px solid var(--color-primary);

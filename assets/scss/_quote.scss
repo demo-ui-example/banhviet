@@ -5,9 +5,18 @@
   background-size: cover;
   background-position: center;
 
+  @media (max-width: 991px) {
+    padding: 48px 24px;
+  }
+
   .title {
     margin-bottom: 32px;
     margin-left: 40px;
+
+    @media (max-width: 991px) {
+      margin-left: 0;
+      margin-bottom: 16px;
+    }
   }
 
   .box {
@@ -24,6 +33,11 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+
+      @media (max-width: 991px) {
+        margin-right: 0;
+        padding: 24px;
+      }
     }
 
     &-image {
@@ -33,6 +47,10 @@
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
   }
 }

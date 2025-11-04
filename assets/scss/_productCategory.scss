@@ -1,7 +1,11 @@
 .product-category {
-  padding: 60px 0;
+  padding: 64px 0;
   background-color: var(--color-white);
   position: relative;
+
+  @media (max-width: 991px) {
+    padding: 48px 0 114px;
+  }
 
   h2.title {
     margin-bottom: 16px;
@@ -52,6 +56,17 @@
       margin: 0;
       bottom: unset;
 
+      @media (max-width: 991px) {
+        width: 32px;
+        height: 32px;
+        bottom: 48px;
+        top: unset;
+
+        svg {
+          transform: scale(0.8);
+        }
+      }
+
       &.swiper-button-disabled {
         opacity: 0.5;
         pointer-events: none;
@@ -71,13 +86,25 @@
     .arrow-prev {
       right: calc(100px + 40px + 10px);
 
+      @media (max-width: 991px) {
+        right: calc(50%);
+      }
+
       svg {
         transform: scale(-1);
+
+        @media (max-width: 991px) {
+          transform: scale(-0.8);
+        }
       }
     }
 
     .arrow-next {
       right: 100px;
+
+      @media (max-width: 991px) {
+        right: calc(50% - 32px - 10px);
+      }
     }
   }
 }

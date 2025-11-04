@@ -2,6 +2,10 @@
   padding: 64px 160px;
   background: var(--bg-section);
 
+  @media (max-width: 991px) {
+    padding: 48px 24px;
+  }
+
   h2 {
     margin-bottom: 16px;
   }

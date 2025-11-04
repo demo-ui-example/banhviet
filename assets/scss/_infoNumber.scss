@@ -2,6 +2,10 @@
   padding: 80px;
   background-color: var(--color-white);
 
+  @media (max-width: 991px) {
+    padding: 48px 24px;
+  }
+
   h2.title {
     max-width: 410px;
     margin: 0 auto 24px;
@@ -12,7 +16,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
     .item-column {
+      &.item-right {
+        ul li:first-child {
+          border-top: none;
+        }
+      }
       ul {
         display: flex;
         flex-direction: column;

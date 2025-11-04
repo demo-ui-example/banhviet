@@ -24,13 +24,30 @@
       padding: 64px;
       transform: translateY(-64px);
 
+      @media (max-width: 991px) {
+        width: calc(100% - 48px);
+        padding: 48px 24px;
+        transform: translateY(-48px);
+        flex-direction: column;
+        gap: 24px;
+      }
+
       .title {
         width: 40%;
         padding-right: 20%;
+
+        @media (max-width: 991px) {
+          width: 100%;
+          padding-right: 0;
+        }
       }
 
       .content {
         width: 60%;
+
+        @media (max-width: 991px) {
+          width: 100%;
+        }
 
         *:first-child {
           margin-top: 0;

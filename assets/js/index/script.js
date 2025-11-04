@@ -51,7 +51,17 @@ function featuredProduct() {
       delay: 3000,
       disableOnInteraction: false
     },
-    centeredSlides: true
+    centeredSlides: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.5,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 2.5,
+        spaceBetween: 30
+      }
+    }
   });
 }
 
@@ -74,8 +84,9 @@ function categoryProducts() {
     slidesOffsetBefore: 100,
     breakpoints: {
       0: {
-        slidesPerView: 3,
-        spaceBetween: 10
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+        slidesOffsetBefore: 20
       },
       768: {
         slidesPerView: 4.5,

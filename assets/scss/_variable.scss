@@ -49,6 +49,11 @@ body,
   font-size: 64px;
   line-height: 72px;
   font-weight: 400;
+
+  @media (max-width: 991px) {
+    font-size: 48px;
+    line-height: 52px;
+  }
 }
 
 .h2-font {
@@ -56,6 +61,11 @@ body,
   line-height: 52px;
   font-weight: 400;
   font-family: var(--font-heading);
+
+  @media (max-width: 991px) {
+    font-size: 34px;
+    line-height: 40px;
+  }
 }
 
 .h3-font {
@@ -63,6 +73,11 @@ body,
   line-height: 40px;
   font-weight: 400;
   font-family: var(--font-heading);
+
+  @media (max-width: 991px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .h4-font {
@@ -130,4 +145,8 @@ body,
 
 .spacing-64 {
   height: 64px;
+
+  @media (max-width: 991px) {
+    height: 48px;
+  }
 }

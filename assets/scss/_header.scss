@@ -29,12 +29,20 @@
     align-items: center;
     justify-content: space-between;
     padding: 13px 160px;
+
+    @media (max-width: 991px) {
+      padding: 10px 24px;
+    }
   }
 
   &-menu {
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
 
     ul {
       display: flex;

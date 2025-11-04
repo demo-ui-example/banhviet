@@ -7,6 +7,10 @@
     @media (min-width: 1920px) {
       padding: 64px 200px;
     }
+
+    @media (max-width: 991px) {
+      padding: 48px 24px;
+    }
   }
 
   &-content {

@@ -2,12 +2,20 @@
   padding: 64px 100px;
   background-color: var(--color-white);
 
+  @media (max-width: 991px) {
+    padding: 48px 24px;
+  }
+
   .search-top {
     margin-bottom: 32px;
   }
 
   h2.title {
     margin-bottom: 56px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+    }
   }
 
   .list-item {
@@ -16,8 +24,24 @@
     gap: 32px 18px;
     width: 100%;
 
+    @media (max-width: 991px) {
+      gap: 24px 16px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 40px;
+    }
+
     .news-item {
       width: calc(calc(100% - 36px) / 3);
+
+      @media (max-width: 991px) {
+        width: calc(calc(100% - 16px) / 2);
+      }
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
     }
   }
 }
@@ -60,6 +84,10 @@
   .item-content {
     padding: 24px 10px;
     transition: all 0.4s ease;
+
+    @media (max-width: 991px) {
+      padding: 16px 10px;
+    }
 
     .desc,
     .date {
