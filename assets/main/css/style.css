@@ -92,26 +92,27 @@ body,
 }
 
 .b1-font {
-  font-size: 14px;
   line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
 }
 
 .b1-bold-font {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 700;
 }
 
 .tag-r {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 400;
 }
 
 .tag-i {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 400;
   font-style: italic;
 }
@@ -285,7 +286,7 @@ body {
 }
 
 .btn--primary {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.96px;
   font-weight: bold;
@@ -827,8 +828,8 @@ body {
   padding: 40px 120px;
 }
 .intro-column .content-text * {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
 }
 .intro-column .content-text p,
@@ -1018,8 +1019,8 @@ body {
 .list-info-number .list-item .item-column ul li span {
   color: var(--color-primary);
   margin-right: 8px;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: bold;
 }
 .list-info-number .list-item .item-column ul li:hover {
@@ -1352,8 +1353,8 @@ body {
   margin-top: 0;
 }
 .policy-item .content * {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
   margin-top: 16px;
 }
@@ -1610,8 +1611,8 @@ body {
   object-fit: contain;
 }
 .product-detail__banner .desc {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   max-width: 700px;
   margin: 0 auto;
 }
