@@ -122,7 +122,7 @@ function scrollToTop() {
 function productDetail() {
   if ($(".product-detail").length < 1) return;
 
-  document.querySelectorAll(".gallery").forEach((container) => {
+  document.querySelectorAll(".gallery-item").forEach((container) => {
     const thumbs = container.querySelector(".mySwiper");
     const main = container.querySelector(".mySwiper2");
 
@@ -130,7 +130,7 @@ function productDetail() {
     const swiperThumbs = new Swiper(thumbs, {
       loop: true,
       spaceBetween: 10,
-      slidesPerView: "auto",
+      slidesPerView: 3,
       freeMode: true,
       watchSlidesProgress: true,
       centeredSlides: false,
@@ -151,7 +151,7 @@ function productDetail() {
     });
   });
 
-  const galleryProduct = $(".product-detail .gallery");
+  const galleryProduct = $(".product-detail .gallery-item");
   const variantButtonProduct = $(".product-detail .variant-item");
   variantButtonProduct.on("click", function (e) {
     e.preventDefault();
@@ -164,10 +164,12 @@ function productDetail() {
       `.product-detail .variant-item[data-variant="${dataThisVariant}"`
     ).addClass("active");
 
-    // galleryProduct.removeClass("show");
-    // $(`.product-detail .gallery[data-variant="${dataThisVariant}"`).addClass(
-    //   "show"
-    // );
+    console.log(galleryProduct);
+
+    galleryProduct.removeClass("show");
+    $(
+      `.product-detail .gallery-item[data-variant="${dataThisVariant}"`
+    ).addClass("show");
   });
 }
 
