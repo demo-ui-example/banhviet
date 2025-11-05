@@ -4,9 +4,19 @@
   .advantage-wrapper {
     padding: 64px 160px;
 
+    @media (max-width: 991px) {
+      padding: 48px 24px;
+    }
+
     h2.title {
       padding-left: calc(30% + 50px);
       margin-bottom: 50px;
+
+      @media (max-width: 991px) {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -16,13 +26,27 @@
     display: flex;
     gap: 50px;
 
+    @media (max-width: 991px) {
+      gap: 24px;
+      flex-direction: column;
+    }
+
     &-left {
       width: 30%;
       padding-right: 35px;
+
+      @media (max-width: 991px) {
+        width: 100%;
+        padding-right: 0;
+      }
     }
 
     &-right {
       width: calc(70% - 50px);
+
+      @media (max-width: 991px) {
+        width: 100%;
+      }
 
       * {
         font-size: 14px;
