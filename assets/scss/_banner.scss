@@ -2,11 +2,23 @@
   height: calc(100dvh - 88px);
   width: 100%;
 
+  @media (max-width: 767px) {
+    height: 480px;
+  }
+
   &.is-home {
     height: calc(100dvh - 50px);
 
+    @media (max-width: 767px) {
+      height: 480px;
+    }
+
     .swiper-slide {
       height: calc(100dvh - 50px);
+
+      @media (max-width: 767px) {
+        height: 480px;
+      }
     }
   }
 
@@ -74,6 +86,10 @@
 
   .swiper-slide {
     height: calc(100dvh - 88px);
+
+    @media (max-width: 767px) {
+      height: 480px;
+    }
 
     img {
       width: 100%;

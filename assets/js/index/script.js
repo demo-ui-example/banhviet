@@ -28,9 +28,17 @@ function introProducts() {
         slidesPerView: 3,
         spaceBetween: 20
       },
-      768: {
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      991: {
         slidesPerView: 5,
-        spaceBetween: 30
+        spaceBetween: 150
+      },
+      1441: {
+        slidesPerView: 6,
+        spaceBetween: 150
       }
     }
   });
@@ -84,7 +92,7 @@ function categoryProducts() {
     slidesOffsetBefore: 100,
     breakpoints: {
       0: {
-        slidesPerView: 2.5,
+        slidesPerView: 2,
         spaceBetween: 20,
         slidesOffsetBefore: 20
       },
@@ -134,7 +142,15 @@ function productDetail() {
       freeMode: true,
       watchSlidesProgress: true,
       centeredSlides: false,
-      slideToClickedSlide: true
+      slideToClickedSlide: true,
+      breakpoints: {
+        0: {
+          slidesPerView: "auto"
+        },
+        991: {
+          slidesPerView: 3
+        }
+      }
     });
 
     // Slider main
