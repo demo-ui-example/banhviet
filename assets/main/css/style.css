@@ -79,33 +79,33 @@ body,
 @media (max-width: 991px) {
   .h3-font {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 24px;
   }
 }
 
 .h4-font {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 24px;
   font-weight: 400;
   font-family: var(--font-body);
 }
 @media (min-width: 1441px) {
   .h4-font {
     font-size: 30px;
-    line-height: 30px;
+    line-height: 34px;
   }
 }
 
 .h4-bold-font {
   font-size: 20px;
-  line-height: 22px;
+  line-height: 24px;
   font-weight: 800;
   font-family: var(--font-body);
 }
 @media (min-width: 1441px) {
   .h4-bold-font {
     font-size: 30px;
-    line-height: 30px;
+    line-height: 34px;
   }
 }
 
@@ -725,6 +725,7 @@ body {
   height: 40px;
   position: relative;
   position: fixed;
+  z-index: 10;
   top: 24px;
   right: 12px;
   transform: translateY(-50%);
