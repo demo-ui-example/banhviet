@@ -948,7 +948,7 @@ body {
 }
 .banner-content {
   width: 100%;
-  max-width: 450px;
+  max-width: 510px;
   position: absolute;
   z-index: 3;
   top: 50%;
@@ -1433,7 +1433,7 @@ body {
 }
 .post-detail .detail-main .title {
   width: 40%;
-  padding-right: 20%;
+  padding-right: 15%;
 }
 @media (max-width: 991px) {
   .post-detail .detail-main .title {
