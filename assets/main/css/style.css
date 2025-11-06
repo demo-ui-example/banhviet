@@ -8,7 +8,7 @@
   --color-text: #414042;
   --color-text-2: #808285;
   --font-heading: "SVN-Gratelos Display 2", sans-serif;
-  --font-body: "Matahari", sans-serif;
+  --font-body: "Matahari Extended", sans-serif;
 }
 
 body {
@@ -1683,6 +1683,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
+@media (max-width: 480px) {
+  .col-images .list-item.col--2 {
+    grid-template-columns: 1fr;
+  }
+}
 .col-images .list-item.col--2 .item {
   width: 100%;
   aspect-ratio: 474/340;
@@ -1700,6 +1705,14 @@ body {
 .col-images .list-item.col--3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+}
+@media (max-width: 991px) {
+  .col-images .list-item.col--3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .col-images .list-item.col--3 .item {
   position: relative;
@@ -1861,7 +1874,7 @@ body {
 }
 .intro-content {
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 520px;
 }
 .intro-content .desc {
   margin-top: 16px;

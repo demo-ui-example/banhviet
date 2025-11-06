@@ -46,6 +46,10 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
 
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+
       .item {
         width: 100%;
         aspect-ratio: 474 / 340;
@@ -67,6 +71,13 @@
     &.col--3 {
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
+
+      @media (max-width: 991px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
 
       .item {
         position: relative;

@@ -54,7 +54,7 @@ function featuredProduct() {
     centeredSlides: true,
     breakpoints: {
       0: {
-        slidesPerView: 1.5,
+        slidesPerView: 1.2,
         spaceBetween: 20
       },
       992: {
