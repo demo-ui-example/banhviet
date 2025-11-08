@@ -223,6 +223,7 @@
           @media (max-width: 991px) {
             border: 1px solid rgba($color: #005651, $alpha: 0.3);
             color: var(--color-third);
+            border-radius: 10px;
           }
 
           &::placeholder {

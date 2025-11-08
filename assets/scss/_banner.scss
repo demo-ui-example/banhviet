@@ -62,7 +62,8 @@
     }
 
     @media (max-width: 767px) {
-      top: 55px;
+      top: unset;
+      bottom: 55px;
       transform: none;
       text-align: center;
     }

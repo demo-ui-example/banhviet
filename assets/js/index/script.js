@@ -47,18 +47,15 @@ function introProducts() {
 function featuredProduct() {
   if ($(".product-featured").length < 1) return;
 
-  new Swiper(".product-featured-swiper", {
-    slidesPerView: 2.5,
+  const swiperFeatured = new Swiper(".product-featured-swiper", {
+    slidesPerView: 1.5,
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     speed: 800,
     pagination: {
       el: ".product-featured-swiper .swiper-pagination"
     },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
+    autoplay: false, // Tắt autoplay lúc đầu
     centeredSlides: true,
     breakpoints: {
       0: {
@@ -66,11 +63,20 @@ function featuredProduct() {
         spaceBetween: 20
       },
       992: {
-        slidesPerView: 2.5,
+        slidesPerView: 1.5,
         spaceBetween: 30
       }
     }
   });
+
+  // Sau 5s mới bắt đầu autoplay mỗi 3s
+  setTimeout(() => {
+    swiperFeatured.params.autoplay = {
+      delay: 3000,
+      disableOnInteraction: false
+    };
+    swiperFeatured.autoplay.start();
+  }, 5000);
 }
 
 function categoryProducts() {
@@ -82,7 +88,7 @@ function categoryProducts() {
     new Swiper(swiperEl, {
       slidesPerView: 3.3,
       spaceBetween: 10,
-      loop: true,
+      loop: false,
       speed: 800,
       pagination: {
         el: parent.querySelector(".swiper-pagination")
@@ -95,16 +101,16 @@ function categoryProducts() {
         delay: 3000,
         disableOnInteraction: false
       },
-      slidesOffsetBefore: 100,
+      // slidesOffsetBefore: 100,
       breakpoints: {
         0: {
           slidesPerView: 2,
-          spaceBetween: 20,
-          slidesOffsetBefore: 20
+          spaceBetween: 20
+          // slidesOffsetBefore: 20
         },
         768: {
-          slidesPerView: 4.5,
-          spaceBetween: 10
+          slidesPerView: 3.5
+          // spaceBetween: 10
         }
       }
     });
@@ -407,6 +413,43 @@ function header() {
   $("#header .header-backdrop").on("click", () => els.removeClass("active"));
 }
 
+function productCol() {
+  if ($(".col-images").length < 1) return;
+
+  document.querySelectorAll(".swiper-col-images").forEach((swiperEl) => {
+    const parent = swiperEl.closest(".list-item");
+    let perView = 1;
+    let gap = 10;
+
+    if (parent) {
+      const colClass = [...parent.classList].find((c) => c.startsWith("col--"));
+
+      if (colClass) {
+        perView = parseInt(colClass.replace("col--", "")) || 1;
+      }
+
+      if (perView == 1) {
+        gap = 0;
+      }
+    }
+
+    new Swiper(swiperEl, {
+      slidesPerView: perView,
+      spaceBetween: gap,
+      loop: true,
+      speed: 800,
+      pagination: {
+        el: swiperEl.querySelector(".swiper-pagination"),
+        clickable: true
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      }
+    });
+  });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   banner();
@@ -419,6 +462,7 @@ const init = () => {
   searchForm();
   marquee();
   header();
+  productCol();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

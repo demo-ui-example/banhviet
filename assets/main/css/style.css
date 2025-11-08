@@ -718,6 +718,7 @@ body {
   .header-cta__search--form input {
     border: 1px solid rgba(0, 86, 81, 0.3);
     color: var(--color-third);
+    border-radius: 10px;
   }
 }
 .header-cta__search--form input::placeholder {
@@ -1009,7 +1010,8 @@ body {
 }
 @media (max-width: 767px) {
   .banner-content {
-    top: 55px;
+    top: unset;
+    bottom: 55px;
     transform: none;
     text-align: center;
   }
@@ -1606,6 +1608,9 @@ body {
 .product-category h2.title {
   margin-bottom: 16px;
 }
+.product-category .product-category-swiper {
+  margin-left: 160px;
+}
 .product-category .swiper-slide {
   border-radius: 20px;
   overflow: hidden;
@@ -1708,15 +1713,18 @@ body {
 .col-images h2 {
   margin-bottom: 16px;
 }
-.col-images .list-item {
-  display: grid;
-  gap: 40px;
-}
 .col-images .list-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.4s ease;
+}
+.col-images .list-item .item {
+  position: relative;
+}
+.col-images .list-item .item a {
+  position: absolute;
+  inset: 0;
 }
 .col-images .list-item .item:hover img {
   transform: scale(1.05);
