@@ -36,7 +36,7 @@ function introProducts() {
         slidesPerView: 5,
         spaceBetween: 150
       },
-      1441: {
+      1600: {
         slidesPerView: 6,
         spaceBetween: 150
       }
@@ -170,6 +170,7 @@ function productDetail() {
     const swiperMain = new Swiper(main, {
       loop: true,
       spaceBetween: 10,
+      effect: "fade",
       navigation: {
         nextEl: container.querySelector(".swiper-button-next"),
         prevEl: container.querySelector(".swiper-button-prev")
@@ -192,8 +193,6 @@ function productDetail() {
     $(
       `.product-detail .variant-item[data-variant="${dataThisVariant}"`
     ).addClass("active");
-
-    console.log(galleryProduct);
 
     galleryProduct.removeClass("show");
     $(
