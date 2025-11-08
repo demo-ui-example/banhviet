@@ -15,9 +15,11 @@
     z-index: 3;
 
     @media (max-width: 991px) {
-      width: 150px;
+      width: 350px;
       top: 0;
       bottom: unset;
+      position: unset;
+      margin-left: auto;
     }
   }
 
@@ -27,7 +29,7 @@
     grid-template-columns: 60% 40%;
 
     @media (max-width: 991px) {
-      padding: 8px 24px 48px;
+      padding: 8px 24px 0;
       grid-template-columns: 1fr;
     }
 
@@ -35,6 +37,7 @@
       .title {
         @media (max-width: 991px) {
           width: 100%;
+          text-align: center;
         }
       }
       .list-item {
@@ -44,17 +47,22 @@
         gap: 40px;
 
         @media (max-width: 991px) {
-          margin-top: 80px;
+          margin-top: 24px;
           gap: 24px;
         }
 
         li {
           border-bottom: 1px solid var(--color-primary);
           padding-bottom: 8px;
+          padding-left: 20px;
+          position: relative;
 
           span {
             color: var(--color-primary);
             margin-right: 4px;
+            position: absolute;
+            left: 0;
+            top: 0;
           }
         }
       }

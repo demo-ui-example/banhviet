@@ -38,6 +38,10 @@
         margin-right: 0;
         padding: 24px;
       }
+
+      @media (max-width: 767px) {
+        padding-bottom: 350px;
+      }
     }
 
     &-image {
@@ -50,6 +54,17 @@
 
       @media (max-width: 991px) {
         display: none;
+      }
+
+      @media (max-width: 767px) {
+        display: block;
+        width: 350px;
+        height: 380px;
+
+        img {
+          object-fit: cover;
+          object-position: top;
+        }
       }
     }
   }

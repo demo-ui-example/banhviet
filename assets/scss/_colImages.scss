@@ -52,11 +52,17 @@
 
       .item {
         width: 100%;
-        aspect-ratio: 474 / 340;
+        aspect-ratio: 1;
         border-radius: 10px;
         overflow: hidden;
-        max-height: 400px;
+        // max-height: 400px;
         transition: all 0.4s ease;
+        position: relative;
+
+        a {
+          position: absolute;
+          inset: 0;
+        }
 
         &:hover {
           transform: scale(0.95);

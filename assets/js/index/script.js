@@ -84,6 +84,9 @@ function categoryProducts() {
       spaceBetween: 10,
       loop: true,
       speed: 800,
+      pagination: {
+        el: parent.querySelector(".swiper-pagination")
+      },
       navigation: {
         nextEl: parent.querySelector(".arrow-next"),
         prevEl: parent.querySelector(".arrow-prev")

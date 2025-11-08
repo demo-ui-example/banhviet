@@ -2,7 +2,7 @@
   background: var(--bg-section);
 
   &-container {
-    padding: 64px 0 0;
+    padding: 64px 0;
 
     @media (min-width: 1920px) {
       padding: 64px 0 0;
@@ -22,12 +22,16 @@
     }
 
     .desc {
-      margin-top: 16px;
+      margin-top: 24px;
       text-align: center;
     }
 
     .btn-wrapper {
-      margin-top: 16px;
+      margin-top: 32px;
+
+      @media (max-width: 991px) {
+        margin-top: 24px;
+      }
     }
 
     .btn--primary {
@@ -38,13 +42,14 @@
   }
 
   &-image {
-    width: 100%;
-    aspect-ratio: 1440 / 480;
-    margin-top: 46px;
+    width: calc(100% - 128px);
+    aspect-ratio: 1440 / 700;
+    margin: 64px auto 0;
 
     @media (max-width: 991px) {
-      margin-top: 16px;
+      margin: 24px auto 0;
       aspect-ratio: 320 / 257;
+      width: 100%;
     }
 
     img {

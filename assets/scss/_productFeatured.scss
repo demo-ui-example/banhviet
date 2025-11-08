@@ -42,32 +42,4 @@
       text-align: center;
     }
   }
-
-  .swiper-pagination {
-    display: flex;
-    gap: 12px;
-    position: unset;
-    width: max-content;
-    margin: 40px auto 0;
-
-    @media (max-width: 991px) {
-      margin: 32px auto 0;
-    }
-
-    .swiper-pagination-bullet {
-      width: 4px;
-      border-radius: 50%;
-      height: 4px;
-      background-color: #969696;
-      transition: all 0.3s ease;
-      margin: 0;
-      opacity: 1;
-
-      &.swiper-pagination-bullet-active {
-        width: 44px;
-        background-color: #414042;
-        border-radius: 20px;
-      }
-    }
-  }
 }
