@@ -2024,8 +2024,8 @@ body {
 }
 @media (max-width: 991px) {
   .intro-products .products-swiper {
-    padding: 0;
-    padding-bottom: 70px;
+    padding: 32px 0 70px;
+    margin-top: 10px;
   }
 }
 .intro-products .products-swiper::before, .intro-products .products-swiper::after {
