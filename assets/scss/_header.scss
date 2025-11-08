@@ -1,21 +1,22 @@
 #header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  height: 50px;
+  height: auto;
   background-color: var(--color-primary);
 
   & + .blank-spacing {
     height: 50px;
+    display: none;
   }
 }
 
 .header {
   &-logo {
-    width: 117px;
-    height: 24px;
+    width: 140px;
+    // height: 24px;
 
     img {
       width: 100%;

@@ -4,7 +4,7 @@
 
 .footer {
   &-container {
-    padding: 50px 100px;
+    padding: 50px 160px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
@@ -31,12 +31,15 @@
       }
 
       &.name {
-        letter-spacing: 0.96px;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 800;
       }
 
       &.address {
-        font-style: italic;
         font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
       }
     }
   }
@@ -55,7 +58,21 @@
   &-left {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 30px;
+    position: relative;
+    height: max-content;
+    background-color: var(--color-primary);
+    max-width: 400px;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-third);
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+    }
   }
 
   &-social {
@@ -63,16 +80,9 @@
     gap: 12px;
     position: relative;
     width: max-content;
-
-    &::after {
-      content: "";
-      width: 230px;
-      height: 1px;
-      background-color: var(--color-third);
-      position: absolute;
-      bottom: 0;
-      left: calc(100% + 10px);
-    }
+    z-index: 2;
+    background-color: var(--color-primary);
+    padding-right: 12px;
 
     li {
       width: 24px;
@@ -107,14 +117,10 @@
       padding: 16px 24px;
     }
 
-    .desc {
-      margin-top: 12px;
-    }
-
     .form {
       display: flex;
       flex-direction: column;
-      margin-top: 12px;
+      // margin-top: 12px;
       gap: 12px;
 
       input {

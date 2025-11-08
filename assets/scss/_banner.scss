@@ -1,5 +1,5 @@
 .banner {
-  height: calc(100dvh - 88px);
+  height: calc(100dvh - 55px);
   width: 100%;
 
   @media (max-width: 767px) {
@@ -7,14 +7,14 @@
   }
 
   &.is-home {
-    height: calc(100dvh - 50px);
+    height: calc(100dvh - 55px);
 
     @media (max-width: 767px) {
       height: 500px;
     }
 
     .swiper-slide {
-      height: calc(100dvh - 50px);
+      height: calc(100dvh - 55px);
 
       @media (max-width: 767px) {
         height: 500px;
@@ -51,7 +51,7 @@
     max-width: 510px;
     position: absolute;
     z-index: 3;
-    top: 50%;
+    top: calc(50% + 55px);
     left: 160px;
     transform: translateY(-50%);
     color: var(--color-secondary);

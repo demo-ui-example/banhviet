@@ -110,10 +110,9 @@ body,
 }
 
 .b1-font {
-  line-height: 18px;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .b1-bold-font {
@@ -370,7 +369,6 @@ body {
 }
 
 .breadcrumb {
-  position: sticky;
   z-index: 100;
   top: 50px;
   left: 0;
@@ -508,21 +506,21 @@ body {
 }
 
 #header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  height: 50px;
+  height: auto;
   background-color: var(--color-primary);
 }
 #header + .blank-spacing {
   height: 50px;
+  display: none;
 }
 
 .header-logo {
-  width: 117px;
-  height: 24px;
+  width: 140px;
 }
 .header-logo img {
   width: 100%;
@@ -829,7 +827,7 @@ body {
 }
 
 .footer-container {
-  padding: 50px 100px;
+  padding: 50px 160px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
@@ -851,11 +849,14 @@ body {
   margin-bottom: 8px;
 }
 .footer-info p.name {
-  letter-spacing: 0.96px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 800;
 }
 .footer-info p.address {
-  font-style: italic;
   font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
 }
 .footer-logo {
   width: 176px;
@@ -869,22 +870,29 @@ body {
 .footer-left {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 30px;
+  position: relative;
+  height: max-content;
+  background-color: var(--color-primary);
+  max-width: 400px;
+}
+.footer-left::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-third);
+  position: absolute;
+  bottom: 1px;
+  left: 0;
 }
 .footer-social {
   display: flex;
   gap: 12px;
   position: relative;
   width: max-content;
-}
-.footer-social::after {
-  content: "";
-  width: 230px;
-  height: 1px;
-  background-color: var(--color-third);
-  position: absolute;
-  bottom: 0;
-  left: calc(100% + 10px);
+  z-index: 2;
+  background-color: var(--color-primary);
+  padding-right: 12px;
 }
 .footer-social li {
   width: 24px;
@@ -911,13 +919,9 @@ body {
     padding: 16px 24px;
   }
 }
-.footer-right .desc {
-  margin-top: 12px;
-}
 .footer-right .form {
   display: flex;
   flex-direction: column;
-  margin-top: 12px;
   gap: 12px;
 }
 .footer-right .form input {
@@ -949,7 +953,7 @@ body {
 }
 
 .banner {
-  height: calc(100dvh - 88px);
+  height: calc(100dvh - 55px);
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -958,7 +962,7 @@ body {
   }
 }
 .banner.is-home {
-  height: calc(100dvh - 50px);
+  height: calc(100dvh - 55px);
 }
 @media (max-width: 767px) {
   .banner.is-home {
@@ -966,7 +970,7 @@ body {
   }
 }
 .banner.is-home .swiper-slide {
-  height: calc(100dvh - 50px);
+  height: calc(100dvh - 55px);
 }
 @media (max-width: 767px) {
   .banner.is-home .swiper-slide {
@@ -997,7 +1001,7 @@ body {
   max-width: 510px;
   position: absolute;
   z-index: 3;
-  top: 50%;
+  top: calc(50% + 55px);
   left: 160px;
   transform: translateY(-50%);
   color: var(--color-secondary);
@@ -1080,7 +1084,7 @@ body {
   padding: 14px 40px;
   position: sticky;
   z-index: 10;
-  top: 50px;
+  top: 0;
   margin: 48px 0;
 }
 .section-category .list-item {
@@ -1109,12 +1113,12 @@ body {
 
 .intro-column {
   background-color: var(--color-white);
-  margin-bottom: 54px;
+  margin-bottom: 80px;
   overflow: hidden;
 }
 @media (max-width: 991px) {
   .intro-column {
-    margin-bottom: 24px;
+    margin-bottom: 64px;
   }
 }
 .intro-column .content {
@@ -1203,7 +1207,7 @@ body {
 
 .quote {
   position: relative;
-  padding: 40px 0 100px 100px;
+  padding: 80px 0 100px 100px;
   background: url("../../images/draf/about/bg-quote.webp");
   background-size: cover;
   background-position: center;
@@ -1277,7 +1281,7 @@ body {
 }
 
 .section-news {
-  padding: 64px 100px;
+  padding: 80px 100px 64px;
   background-color: var(--color-white);
 }
 @media (max-width: 991px) {
@@ -1600,7 +1604,7 @@ body {
 }
 
 .product-category {
-  padding: 64px 0;
+  padding: 80px 0;
   background-color: var(--color-white);
   position: relative;
 }
@@ -1706,7 +1710,7 @@ body {
 }
 
 .col-images {
-  padding: 64px 160px;
+  padding: 80px 160px;
   background: var(--bg-section);
 }
 @media (max-width: 991px) {
@@ -2157,10 +2161,10 @@ body {
   }
 }
 .image-with-text .image-main {
-  width: 520px;
+  width: 40%;
   height: auto;
   position: absolute;
-  bottom: 0;
+  bottom: 48px;
   right: 0;
   z-index: 3;
 }
@@ -2178,9 +2182,9 @@ body {
   }
 }
 .image-with-text .section-wrapper {
-  padding: 65px 160px;
+  padding: 0 160px 80px;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 70% 30%;
 }
 @media (max-width: 991px) {
   .image-with-text .section-wrapper {
@@ -2221,7 +2225,7 @@ body {
 }
 
 .brands {
-  padding: 64px 0;
+  padding: 80px 0 64px;
   background-color: var(--color-white);
 }
 @media (max-width: 991px) {
@@ -2268,11 +2272,11 @@ body {
   background-repeat: no-repeat;
 }
 .product-detail__banner {
-  padding: 80px 160px 40px;
+  padding: 25px 160px 40px;
 }
 @media (max-width: 991px) {
   .product-detail__banner {
-    padding: 64px 24px 32px;
+    padding: 25px 24px 32px;
   }
 }
 .product-detail__banner h1 {
@@ -2286,8 +2290,8 @@ body {
   margin-top: 8px;
 }
 .product-detail__banner .image {
-  width: 400px;
-  height: 450px;
+  width: 100%;
+  aspect-ratio: 1120/450;
   margin: 0 auto;
 }
 @media (max-width: 991px) {
@@ -2300,13 +2304,13 @@ body {
 .product-detail__banner .image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .product-detail__banner .desc {
   font-size: 14px;
   line-height: 18px;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 48px auto 0;
 }
 .product-detail__banner .desc p {
   margin-top: 12px;
@@ -2324,7 +2328,7 @@ body {
   background-color: var(--color-white);
   border-radius: 20px;
   padding: 30px 64px 30px 0;
-  box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
+  box-shadow: 0 0 30px 4px rgba(117, 117, 117, 0.2);
 }
 @media (max-width: 991px) {
   .product-detail__ingredients {
@@ -2646,7 +2650,7 @@ body {
   z-index: 99;
   width: 100%;
   background-color: #f5f5f7;
-  top: 50px;
+  top: 0;
   left: 0;
   margin-top: 32px;
 }
@@ -2679,6 +2683,7 @@ body {
 }
 .category-tab__wrapper .category-item .text {
   margin-top: 10px;
+  font-size: 12px;
 }
 .category-tab__wrapper .category-item .image {
   width: 30px;
