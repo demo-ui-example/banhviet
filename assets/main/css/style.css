@@ -978,10 +978,10 @@ body {
   }
 }
 .banner.banner-short {
-  height: 340px;
+  height: 400px;
 }
 .banner.banner-short .swiper-slide {
-  height: 340px;
+  height: 400px;
 }
 .banner-image {
   width: 100%;
@@ -2291,7 +2291,7 @@ body {
 }
 .product-detail__banner .image {
   width: 100%;
-  aspect-ratio: 1120/450;
+  aspect-ratio: 1120/500;
   margin: 0 auto;
 }
 @media (max-width: 991px) {
