@@ -3,21 +3,21 @@
   width: 100%;
 
   @media (max-width: 767px) {
-    height: 480px;
+    height: 500px;
   }
 
   &.is-home {
     height: calc(100dvh - 50px);
 
     @media (max-width: 767px) {
-      height: 480px;
+      height: 500px;
     }
 
     .swiper-slide {
       height: calc(100dvh - 50px);
 
       @media (max-width: 767px) {
-        height: 480px;
+        height: 500px;
       }
     }
   }
@@ -61,6 +61,12 @@
       left: 24px;
     }
 
+    @media (max-width: 767px) {
+      top: 55px;
+      transform: none;
+      text-align: center;
+    }
+
     h1 {
       font-family: var(--font-body);
       font-weight: 800;
@@ -81,6 +87,10 @@
     .btn--primary {
       border: none;
       color: var(--color-white);
+
+      @media (max-width: 767px) {
+        margin: 0 auto;
+      }
     }
   }
 

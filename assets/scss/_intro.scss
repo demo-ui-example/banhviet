@@ -2,20 +2,24 @@
   background: var(--bg-section);
 
   &-container {
-    padding: 64px 160px;
+    padding: 64px 0 0;
 
     @media (min-width: 1920px) {
-      padding: 64px 200px;
+      padding: 64px 0 0;
     }
 
     @media (max-width: 991px) {
-      padding: 48px 24px;
+      padding: 48px 0 0;
     }
   }
 
   &-content {
     margin: 0 auto;
     max-width: 520px;
+
+    @media (max-width: 991px) {
+      margin: 0 24px;
+    }
 
     .desc {
       margin-top: 16px;
@@ -35,8 +39,13 @@
 
   &-image {
     width: 100%;
-    aspect-ratio: 860 / 480;
+    aspect-ratio: 1440 / 480;
     margin-top: 46px;
+
+    @media (max-width: 991px) {
+      margin-top: 16px;
+      aspect-ratio: 320 / 257;
+    }
 
     img {
       width: 100%;

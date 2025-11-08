@@ -76,31 +76,35 @@ function featuredProduct() {
 function categoryProducts() {
   if ($(".product-category").length < 1) return;
 
-  new Swiper(".product-category-swiper", {
-    slidesPerView: 3.3,
-    spaceBetween: 10,
-    loop: false,
-    speed: 800,
-    navigation: {
-      nextEl: ".product-category .arrow-next",
-      prevEl: ".product-category .arrow-prev"
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    slidesOffsetBefore: 100,
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        slidesOffsetBefore: 20
+  document.querySelectorAll(".product-category-swiper").forEach((swiperEl) => {
+    const parent = swiperEl.closest(".product-category");
+
+    new Swiper(swiperEl, {
+      slidesPerView: 3.3,
+      spaceBetween: 10,
+      loop: true,
+      speed: 800,
+      navigation: {
+        nextEl: parent.querySelector(".arrow-next"),
+        prevEl: parent.querySelector(".arrow-prev")
       },
-      768: {
-        slidesPerView: 4.5,
-        spaceBetween: 10
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      slidesOffsetBefore: 100,
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          slidesOffsetBefore: 20
+        },
+        768: {
+          slidesPerView: 4.5,
+          spaceBetween: 10
+        }
       }
-    }
+    });
   });
 }
 
