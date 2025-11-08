@@ -130,6 +130,7 @@
       background-color: var(--color-white);
       // box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
       width: 30%;
+      height: max-content;
 
       @media (max-width: 991px) {
         width: 100%;
@@ -148,8 +149,9 @@
           color: var(--color-text);
 
           .icon {
-            width: 45px;
-            height: 45px;
+            width: 72px;
+            height: 72px;
+            min-width: 72px;
             border-radius: 10px;
             background-color: var(--color-primary);
             display: flex;
@@ -157,9 +159,10 @@
             justify-content: center;
 
             img {
-              width: 32px;
-              height: 32px;
+              width: 100%;
+              height: 100%;
               object-fit: contain;
+              padding: 10px;
             }
           }
         }
@@ -180,7 +183,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 24px;
+        padding: 32px 24px;
         border-radius: 10px;
         background-color: #edf7f5;
         color: var(--color-white);
@@ -190,6 +193,15 @@
         top: 40px;
         right: 40px;
         text-align: center;
+
+        .percent {
+          font-size: 84px;
+          line-height: 84px;
+        }
+
+        .info {
+          margin-top: 8px;
+        }
 
         @media (max-width: 991px) {
           padding: 12px;
@@ -391,7 +403,7 @@
       width: 30%;
 
       position: absolute;
-      bottom: 20px;
+      bottom: 0;
       right: 0;
 
       @media (max-width: 991px) {
@@ -408,7 +420,7 @@
       cursor: pointer;
       border-radius: 5px;
       overflow: hidden;
-      border: 1px solid #00978a;
+      // border: 1px solid #00978a;
     }
 
     .thumbnail-slider .swiper-slide img {
