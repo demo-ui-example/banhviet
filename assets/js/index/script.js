@@ -50,7 +50,7 @@ function featuredProduct() {
   const swiperFeatured = new Swiper(".product-featured-swiper", {
     slidesPerView: 1.5,
     spaceBetween: 30,
-    loop: false,
+    loop: true,
     speed: 800,
     pagination: {
       el: ".product-featured-swiper .swiper-pagination"
@@ -86,7 +86,7 @@ function categoryProducts() {
     const parent = swiperEl.closest(".product-category");
 
     new Swiper(swiperEl, {
-      slidesPerView: 3.3,
+      slidesPerView: 3.2,
       spaceBetween: 10,
       loop: false,
       speed: 800,
@@ -109,7 +109,7 @@ function categoryProducts() {
           // slidesOffsetBefore: 20
         },
         768: {
-          slidesPerView: 3.5
+          slidesPerView: 3.2
           // spaceBetween: 10
         }
       }
@@ -408,8 +408,20 @@ function header() {
     ".header-hambuger, #header .header-menu, #header .header-backdrop"
   );
 
-  $(".header-hambuger").on("click", () => els.toggleClass("active"));
-  $("#header .header-backdrop").on("click", () => els.removeClass("active"));
+  $(".header-hambuger").on("click", () => {
+    els.toggleClass("active");
+
+    if (els.hasClass("active")) {
+      lenis.stop();
+    } else {
+      lenis.start();
+    }
+  });
+
+  $("#header .header-backdrop").on("click", () => {
+    els.removeClass("active");
+    lenis.start();
+  });
 }
 
 function productCol() {

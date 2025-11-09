@@ -6,6 +6,10 @@
   top: 0;
   margin: 48px 0;
 
+  @media (max-width: 991px) {
+    padding: 14px 24px;
+  }
+
   .list-item {
     display: flex;
     align-items: center;

@@ -12,6 +12,12 @@
   .swiper-slide {
     border-radius: 20px;
     overflow: hidden;
+    transition: opacity 0.8s ease;
+
+    &.swiper-slide-prev {
+      opacity: 0;
+      pointer-events: none;
+    }
 
     &:hover {
       img {

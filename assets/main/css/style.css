@@ -548,7 +548,8 @@ body {
     position: fixed;
     top: 50px;
     right: 0;
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
     height: 100dvh;
     background-color: var(--color-white);
     align-items: flex-end;
@@ -557,6 +558,7 @@ body {
     clip-path: inset(0 0 0 100%);
     transition: clip-path 0.5s ease;
     z-index: 10;
+    gap: 24px;
   }
 }
 .header-menu.active {
@@ -750,10 +752,9 @@ body {
   display: none;
   width: 40px;
   height: 40px;
-  position: relative;
-  position: fixed;
+  position: absolute;
   z-index: 10;
-  top: 24px;
+  top: 50%;
   right: 12px;
   transform: translateY(-50%);
   border-radius: 4px;
@@ -1087,6 +1088,11 @@ body {
   top: 0;
   margin: 48px 0;
 }
+@media (max-width: 991px) {
+  .section-category {
+    padding: 14px 24px;
+  }
+}
 .section-category .list-item {
   display: flex;
   align-items: center;
@@ -1149,7 +1155,7 @@ body {
 @media (max-width: 991px) {
   .intro-column .content-text {
     width: 100%;
-    padding: 24px;
+    padding: 48px 24px;
   }
 }
 .intro-column .content-text * {
@@ -1578,6 +1584,11 @@ body {
 .product-featured .swiper-slide {
   border-radius: 20px;
   overflow: hidden;
+  transition: opacity 0.8s ease;
+}
+.product-featured .swiper-slide.swiper-slide-prev {
+  opacity: 0;
+  pointer-events: none;
 }
 .product-featured .swiper-slide:hover img {
   transform: scale(1.05);
@@ -1707,6 +1718,9 @@ body {
   .product-category .swiper-arrows .arrow-next {
     right: calc(50% - 32px - 10px);
   }
+}
+.product-category .sswiper-pagination {
+  transform: translateX(-80px);
 }
 
 .col-images {
@@ -2179,6 +2193,7 @@ body {
     bottom: unset;
     position: unset;
     margin-left: auto;
+    padding: 32px 0 64px;
   }
 }
 .image-with-text .section-wrapper {
@@ -2614,9 +2629,7 @@ body {
 }
 .product-detail__main .thumbnail-slider {
   margin-top: 15px;
-  height: 55px;
   margin-right: 0 !important;
-  width: 30%;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -2628,8 +2641,9 @@ body {
   }
 }
 .product-detail__main .thumbnail-slider .swiper-slide {
-  width: 55px;
-  height: 55px;
+  width: 55px !important;
+  height: 55px !important;
+  aspect-ratio: 1;
   opacity: 0.5;
   transition: all 0.3s ease;
   cursor: pointer;
