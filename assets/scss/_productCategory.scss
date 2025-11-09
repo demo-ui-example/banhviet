@@ -13,6 +13,10 @@
 
   .product-category-swiper {
     margin-left: 160px;
+
+    @media (max-width: 767px) {
+      margin-left: 24px;
+    }
   }
 
   .swiper-slide {
@@ -114,5 +118,9 @@
 
   .sswiper-pagination {
     transform: translateX(-80px);
+
+    @media (max-width: 767px) {
+      transform: translateX(-24px);
+    }
   }
 }

@@ -38,6 +38,8 @@
           padding: 20px 0;
           position: relative;
           transition: all 0.4s ease;
+          position: relative;
+          padding-left: 20px;
 
           span {
             color: var(--color-primary);
@@ -45,6 +47,9 @@
             font-size: 14px;
             line-height: 18px;
             font-weight: bold;
+            position: absolute;
+            top: 20px;
+            left: 0;
           }
 
           &:hover {

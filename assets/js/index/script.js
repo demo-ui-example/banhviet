@@ -88,7 +88,7 @@ function categoryProducts() {
     new Swiper(swiperEl, {
       slidesPerView: 3.2,
       spaceBetween: 10,
-      loop: false,
+      loop: true,
       speed: 800,
       pagination: {
         el: parent.querySelector(".swiper-pagination")
@@ -104,7 +104,7 @@ function categoryProducts() {
       // slidesOffsetBefore: 100,
       breakpoints: {
         0: {
-          slidesPerView: 2,
+          slidesPerView: 1.2,
           spaceBetween: 20
           // slidesOffsetBefore: 20
         },
@@ -456,6 +456,11 @@ function productCol() {
       autoplay: {
         delay: 3000,
         disableOnInteraction: false
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1
+        }
       }
     });
   });

@@ -46,6 +46,10 @@
         border-radius: 10px;
         overflow: hidden;
         // height: 340px;
+
+        @media (max-width: 767px) {
+          aspect-ratio: 380 / 250;
+        }
       }
     }
 

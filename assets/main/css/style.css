@@ -1474,6 +1474,8 @@ body {
   padding: 20px 0;
   position: relative;
   transition: all 0.4s ease;
+  position: relative;
+  padding-left: 20px;
 }
 .list-info-number .list-item .item-column ul li span {
   color: var(--color-primary);
@@ -1481,6 +1483,9 @@ body {
   font-size: 14px;
   line-height: 18px;
   font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 0;
 }
 .list-info-number .list-item .item-column ul li:hover {
   color: var(--color-primary);
@@ -1630,6 +1635,11 @@ body {
 .product-category .product-category-swiper {
   margin-left: 160px;
 }
+@media (max-width: 767px) {
+  .product-category .product-category-swiper {
+    margin-left: 24px;
+  }
+}
 .product-category .swiper-slide {
   border-radius: 20px;
   overflow: hidden;
@@ -1722,6 +1732,11 @@ body {
 .product-category .sswiper-pagination {
   transform: translateX(-80px);
 }
+@media (max-width: 767px) {
+  .product-category .sswiper-pagination {
+    transform: translateX(-24px);
+  }
+}
 
 .col-images {
   padding: 80px 160px;
@@ -1760,6 +1775,11 @@ body {
   aspect-ratio: 760/340;
   border-radius: 10px;
   overflow: hidden;
+}
+@media (max-width: 767px) {
+  .col-images .list-item.col--1 .item {
+    aspect-ratio: 380/250;
+  }
 }
 .col-images .list-item.col--2 {
   grid-template-columns: repeat(2, 1fr);
@@ -2461,6 +2481,12 @@ body {
   font-size: 100px;
   line-height: 100px;
 }
+@media (max-width: 767px) {
+  .product-detail__main .detail .tag .percent {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
 .product-detail__main .detail .tag .info {
   margin-top: 8px;
 }
@@ -2678,6 +2704,7 @@ body {
 @media (max-width: 991px) {
   .category-tab__wrapper {
     padding: 5px;
+    gap: 10px;
   }
 }
 .category-tab__wrapper .category-item {

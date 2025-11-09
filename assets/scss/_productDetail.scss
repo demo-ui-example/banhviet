@@ -197,6 +197,11 @@
         .percent {
           font-size: 100px;
           line-height: 100px;
+
+          @media (max-width: 767px) {
+            font-size: 48px;
+            line-height: 48px;
+          }
         }
 
         .info {
