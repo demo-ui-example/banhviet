@@ -25,11 +25,11 @@ function introProducts() {
     },
     breakpoints: {
       0: {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 20
       },
       767: {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 20
       },
       991: {

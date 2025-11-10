@@ -20,7 +20,7 @@
       background-color: var(--color-primary);
 
       @media (max-width: 991px) {
-        bottom: 115px;
+        bottom: 77px;
       }
     }
   }
@@ -51,7 +51,7 @@
     padding-top: 40px;
 
     @media (max-width: 991px) {
-      padding: 32px 0 70px;
+      padding: 32px 0;
       margin-top: 10px;
     }
 
@@ -81,7 +81,7 @@
       transition: transform 0.4s ease;
 
       @media (max-width: 767px) {
-        padding: 0 20px;
+        padding: 0 140px;
       }
 
       &:hover {
@@ -135,10 +135,6 @@
         @media (max-width: 991px) {
           width: 32px;
           height: 32px;
-          top: unset;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(calc(calc(-5px) + 50%));
 
           svg {
             transform: scale(0.8);
@@ -158,11 +154,6 @@
 
       .arrow-prev {
         left: 20px;
-
-        @media (max-width: 991px) {
-          left: 50%;
-          transform: translateX(calc(calc(-15px) - 50%));
-        }
 
         svg {
           transform: scale(-1);

@@ -130,7 +130,7 @@
       background-color: var(--color-white);
       // box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
       width: 30%;
-      height: max-content;
+      height: 100%;
 
       @media (max-width: 991px) {
         width: 100%;
@@ -149,9 +149,9 @@
           color: var(--color-text);
 
           .icon {
-            width: 72px;
-            height: 72px;
-            min-width: 72px;
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
             border-radius: 10px;
             background-color: var(--color-primary);
             display: flex;

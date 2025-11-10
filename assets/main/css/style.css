@@ -2046,7 +2046,7 @@ body {
 }
 @media (max-width: 991px) {
   .intro-products__container::after {
-    bottom: 115px;
+    bottom: 77px;
   }
 }
 .intro-products .section-title {
@@ -2074,7 +2074,7 @@ body {
 }
 @media (max-width: 991px) {
   .intro-products .products-swiper {
-    padding: 32px 0 70px;
+    padding: 32px 0;
     margin-top: 10px;
   }
 }
@@ -2103,7 +2103,7 @@ body {
 }
 @media (max-width: 767px) {
   .intro-products .products-swiper .swiper-slide {
-    padding: 0 20px;
+    padding: 0 140px;
   }
 }
 .intro-products .products-swiper .swiper-slide:hover {
@@ -2149,10 +2149,6 @@ body {
   .intro-products .products-swiper .swiper-arrows .arrow-next {
     width: 32px;
     height: 32px;
-    top: unset;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(calc(-5px + 50%));
   }
   .intro-products .products-swiper .swiper-arrows .arrow-prev svg,
   .intro-products .products-swiper .swiper-arrows .arrow-next svg {
@@ -2171,12 +2167,6 @@ body {
 }
 .intro-products .products-swiper .swiper-arrows .arrow-prev {
   left: 20px;
-}
-@media (max-width: 991px) {
-  .intro-products .products-swiper .swiper-arrows .arrow-prev {
-    left: 50%;
-    transform: translateX(calc(-15px - 50%));
-  }
 }
 .intro-products .products-swiper .swiper-arrows .arrow-prev svg {
   transform: scale(-1);
@@ -2417,7 +2407,7 @@ body {
   border-radius: 20px;
   background-color: var(--color-white);
   width: 30%;
-  height: max-content;
+  height: 100%;
 }
 @media (max-width: 991px) {
   .product-detail__main .different {
@@ -2437,9 +2427,9 @@ body {
   color: var(--color-text);
 }
 .product-detail__main .different .list-item li .icon {
-  width: 72px;
-  height: 72px;
-  min-width: 72px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
   border-radius: 10px;
   background-color: var(--color-primary);
   display: flex;
