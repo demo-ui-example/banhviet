@@ -840,6 +840,11 @@ body {
     gap: 48px;
   }
 }
+@media (max-width: 767px) {
+  .footer-info {
+    text-align: center;
+  }
+}
 .footer-info a {
   transition: all 0.4s ease;
 }
@@ -854,6 +859,11 @@ body {
   line-height: 18px;
   font-weight: 800;
 }
+@media (max-width: 767px) {
+  .footer-info p.name {
+    text-align: center;
+  }
+}
 .footer-info p.address {
   font-weight: 300;
   font-size: 12px;
@@ -862,6 +872,11 @@ body {
 .footer-logo {
   width: 176px;
   height: 36px;
+}
+@media (max-width: 767px) {
+  .footer-logo {
+    margin: 0 auto;
+  }
 }
 .footer-logo img {
   width: 100%;
@@ -876,6 +891,12 @@ body {
   height: max-content;
   background-color: var(--color-primary);
   max-width: 400px;
+}
+@media (max-width: 767px) {
+  .footer-left {
+    text-align: center;
+    align-items: center;
+  }
 }
 .footer-left::after {
   content: "";
@@ -894,6 +915,11 @@ body {
   z-index: 2;
   background-color: var(--color-primary);
   padding-right: 12px;
+}
+@media (max-width: 767px) {
+  .footer-social {
+    padding-left: 12px;
+  }
 }
 .footer-social li {
   width: 24px;
@@ -918,6 +944,12 @@ body {
 @media (max-width: 991px) {
   .footer-right {
     padding: 16px 24px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-right .title,
+  .footer-right .desc {
+    text-align: center;
   }
 }
 .footer-right .form {
@@ -945,6 +977,11 @@ body {
 }
 .footer-right .form button {
   margin-top: 15px;
+}
+@media (max-width: 767px) {
+  .footer-right .form button {
+    margin: 15px auto 0;
+  }
 }
 .footer-right .form button:hover {
   color: var(--color-white);
