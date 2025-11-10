@@ -1729,11 +1729,11 @@ body {
     right: calc(50% - 32px - 10px);
   }
 }
-.product-category .sswiper-pagination {
+.product-category .swiper-pagination {
   transform: translateX(-80px);
 }
 @media (max-width: 767px) {
-  .product-category .sswiper-pagination {
+  .product-category .swiper-pagination {
     transform: translateX(-24px);
   }
 }
