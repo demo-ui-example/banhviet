@@ -459,7 +459,12 @@ function productCol() {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1
+          slidesPerView: 1,
+          spaceBetween: 0
+        },
+        991: {
+          slidesPerView: perView,
+          spaceBetween: gap
         }
       }
     });
