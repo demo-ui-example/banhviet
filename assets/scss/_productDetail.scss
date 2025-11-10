@@ -1,6 +1,7 @@
 .product-detail {
-  background: url("../../images/draf/bg-product-detail.png");
-  background-size: cover;
+  // background: url("../../images/draf/bg-product-detail.png");
+  background: var(--bg-product-detail);
+  background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
 
