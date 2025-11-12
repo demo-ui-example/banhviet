@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
 
   &__banner {
-    padding: 25px 160px 40px;
+    padding: 25px 160px 80px;
 
     @media (max-width: 991px) {
       padding: 25px 24px 32px;
@@ -64,33 +64,46 @@
     width: calc(100% - 320px);
     margin: 0 auto;
     align-items: center;
-    display: grid;
+    display: flex;
+    gap: 185px;
     grid-template-columns: 40% 60%;
     background-color: var(--color-white);
     border-radius: 20px;
-    padding: 30px 64px 30px 0;
+    padding: 64px 185px;
     box-shadow: 0 0 30px 4px rgba(117, 117, 117, 0.2);
 
     @media (max-width: 991px) {
       width: calc(100% - 48px);
-      padding: 30px 24px;
+      padding: 48px 24px;
       display: flex;
       flex-direction: column;
+      gap: 48px;
     }
 
     .image {
-      width: 100%;
-      aspect-ratio: 1;
+      width: 30%;
+      height: auto;
 
       @media (max-width: 991px) {
-        max-width: 60%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
         margin: 0 auto;
+        padding: 0 48px;
       }
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+
+    .content {
+      width: 70%;
+
+      @media (max-width: 991px) {
+        width: 100%;
       }
     }
 
@@ -131,7 +144,7 @@
       background-color: var(--color-white);
       // box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
       width: 30%;
-      height: 100%;
+      // height: 100%;
 
       @media (max-width: 991px) {
         width: 100%;
@@ -184,7 +197,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 32px 24px;
+        padding: 40px 24px;
         border-radius: 10px;
         background-color: #edf7f5;
         color: var(--color-white);
@@ -196,8 +209,8 @@
         text-align: center;
 
         .percent {
-          font-size: 100px;
-          line-height: 100px;
+          font-size: 120px;
+          line-height: 120px;
 
           @media (max-width: 767px) {
             font-size: 48px;
@@ -394,6 +407,7 @@
       transition: all 0.3s ease;
 
       opacity: 0;
+      display: none;
     }
 
     .swiper-button-next:hover,
@@ -405,7 +419,7 @@
     .thumbnail-slider {
       margin-top: 15px;
       // height: 55px;
-      margin-right: 0 !important;
+      margin-right: -10px !important;
 
       position: absolute;
       bottom: 0;

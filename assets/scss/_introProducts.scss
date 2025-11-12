@@ -112,6 +112,12 @@
     }
 
     .swiper-arrows {
+      display: none;
+
+      @media (max-width: 991px) {
+        display: block;
+      }
+
       .arrow-prev,
       .arrow-next {
         width: 40px;

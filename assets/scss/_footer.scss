@@ -4,7 +4,7 @@
 
 .footer {
   &-container {
-    padding: 50px 160px;
+    padding: 64px 160px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
@@ -46,8 +46,8 @@
 
       &.address {
         font-weight: 300;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 14px;
+        line-height: 18px;
       }
     }
   }
