@@ -8,7 +8,7 @@
 
   .image-main {
     // width: 520px;
-    width: 40%;
+    width: 35%;
     height: auto;
     position: absolute;
     bottom: 48px;
@@ -33,7 +33,7 @@
   .section-wrapper {
     padding: 0 160px 80px;
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 80% 20%;
 
     @media (max-width: 991px) {
       padding: 8px 24px 0;
