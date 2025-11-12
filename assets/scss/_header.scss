@@ -6,6 +6,7 @@
   z-index: 999;
   height: auto;
   background-color: var(--color-primary);
+  border-bottom: 1px solid var(--color-white);
 
   & + .blank-spacing {
     height: 50px;

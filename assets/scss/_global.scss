@@ -86,7 +86,7 @@
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.96px;
-  font-weight: bold;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,7 +119,7 @@
 .btn--secondary {
   font-size: 14px;
   line-height: 18px;
-  font-weight: bold;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,7 +157,7 @@
   top: 50px;
   left: 0;
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: var(--color-third);
