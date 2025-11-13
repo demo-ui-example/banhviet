@@ -471,6 +471,55 @@ function productCol() {
   });
 }
 
+function scrollToHashLink() {
+  if (window.location.hash && window.location.hash.startsWith("#section-")) {
+    window.scrollTo(0, 0);
+
+    setTimeout(function () {
+      var $target = $(window.location.hash);
+      if ($target.length) {
+        var isMobile = window.innerWidth <= 768;
+        var offset = isMobile ? 40 : 48;
+        var offsetTop = $target.offset().top - offset;
+
+        $("html, body").animate(
+          {
+            scrollTop: offsetTop
+          },
+          600
+        );
+      }
+    }, 500);
+  }
+}
+
+function activeTab() {
+  document.querySelectorAll("section[id]").forEach((section) => {
+    const link = document.querySelector(
+      `.category-tab .category-item[href="#${section.id}"], .section-category .data-fade-list-item`
+    );
+    if (!link) return;
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      end: "bottom top",
+      onEnter: () => {
+        document
+          .querySelectorAll('.category-tab .category-item[href^="#"]')
+          .forEach((a) => a.classList.remove("active"));
+        link.classList.add("active");
+      },
+      onEnterBack: () => {
+        document
+          .querySelectorAll('#header a[href^="#"]')
+          .forEach((a) => a.classList.remove("active"));
+        link.classList.add("active");
+      }
+    });
+  });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   banner();
@@ -484,6 +533,8 @@ const init = () => {
   marquee();
   header();
   productCol();
+  scrollToHashLink();
+  activeTab();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

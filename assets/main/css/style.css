@@ -1984,7 +1984,7 @@ body {
 .policy-item {
   padding: 40px;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
 }
 @media (max-width: 991px) {
   .policy-item {
