@@ -1322,7 +1322,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  text-align: center;
 }
 .quote .box-content .note {
   margin-top: auto;
@@ -1331,6 +1330,7 @@ body {
   .quote .box-content {
     margin-right: 0;
     padding: 24px;
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
