@@ -716,6 +716,7 @@ body {
   width: 100%;
   border: none;
   padding: 7px 16px;
+  padding-right: 45px;
 }
 @media (max-width: 991px) {
   .header-cta__search--form input {
