@@ -1010,6 +1010,10 @@ body {
   height: calc(100dvh - 55px);
   width: 100%;
 }
+.banner picture {
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 767px) {
   .banner {
     height: 500px;
@@ -1103,7 +1107,7 @@ body {
   }
 }
 .banner .swiper-slide {
-  height: calc(100dvh - 88px);
+  height: calc(100dvh - 55px);
 }
 @media (max-width: 767px) {
   .banner .swiper-slide {
