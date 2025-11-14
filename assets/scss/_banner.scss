@@ -8,21 +8,21 @@
   }
 
   @media (max-width: 767px) {
-    height: 500px;
+    height: 540px;
   }
 
   &.is-home {
     height: calc(100dvh - 55px);
 
     @media (max-width: 767px) {
-      height: 500px;
+      height: 540px;
     }
 
     .swiper-slide {
       height: calc(100dvh - 55px);
 
       @media (max-width: 767px) {
-        height: 500px;
+        height: 540px;
       }
     }
   }
@@ -109,7 +109,7 @@
     height: calc(100dvh - 55px);
 
     @media (max-width: 767px) {
-      height: 500px;
+      height: 540px;
     }
 
     img {

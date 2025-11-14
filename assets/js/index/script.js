@@ -122,14 +122,18 @@ function banner() {
 
   new Swiper(".banner-swiper", {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     effect: "fade",
     loop: true,
     speed: 800,
     pagination: {
       el: ".banner-swiper .swiper-pagination"
     },
-    centeredSlides: true
+    centeredSlides: true,
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false
+    }
   });
 }
 
@@ -577,7 +581,6 @@ const init = () => {
   productCol();
   scrollToHashLink();
   activeTab();
-  activeBorderTabMobile();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

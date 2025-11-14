@@ -122,11 +122,9 @@
       .arrow-next {
         width: 40px;
         height: 40px;
-        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid var(--color-text-2);
         color: var(--color-text);
         transition: all 0.4s ease;
         opacity: 1;
@@ -138,23 +136,8 @@
         bottom: unset;
         transform: translateY(-50%);
 
-        @media (max-width: 991px) {
-          width: 32px;
-          height: 32px;
-
-          svg {
-            transform: scale(0.8);
-          }
-        }
-
         svg * {
           transition: all 0.4s ease;
-        }
-
-        &:hover {
-          border-color: var(--color-primary);
-          color: var(--color-secondary);
-          background-color: var(--color-primary);
         }
       }
 
