@@ -228,36 +228,36 @@ function animation() {
         return;
       }
 
-      if (element.classList.contains("data-fade-list")) {
-        const items = element.querySelectorAll(".data-fade-list-item");
-        if (!items.length) return;
+      // if (element.classList.contains("data-fade-list")) {
+      //   const items = element.querySelectorAll(".data-fade-list-item");
+      //   if (!items.length) return;
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: element,
-            start: `top ${posOffset}`,
-            end: `bottom ${posOffset}`,
-            // markers: true,
-            once: true // chỉ chạy 1 lần
-          }
-        });
+      //   const tl = gsap.timeline({
+      //     scrollTrigger: {
+      //       trigger: element,
+      //       start: `top ${posOffset}`,
+      //       end: `bottom ${posOffset}`,
+      //       // markers: true,
+      //       once: true // chỉ chạy 1 lần
+      //     }
+      //   });
 
-        items.forEach((item, i) => {
-          tl.fromTo(
-            item,
-            { opacity: 0, y: 20 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: duration,
-              ease: "power1.out"
-            },
-            delay + i * 0.2
-          );
-        });
+      //   items.forEach((item, i) => {
+      //     tl.fromTo(
+      //       item,
+      //       { opacity: 0, y: 20 },
+      //       {
+      //         opacity: 1,
+      //         y: 0,
+      //         duration: duration,
+      //         ease: "power1.out"
+      //       },
+      //       delay + i * 0.2
+      //     );
+      //   });
 
-        return;
-      }
+      //   return;
+      // }
 
       gsap.fromTo(
         element,
@@ -494,31 +494,73 @@ function scrollToHashLink() {
 }
 
 function activeTab() {
-  document.querySelectorAll("section[id]").forEach((section) => {
-    const link = document.querySelector(
-      `.category-tab .category-item[href="#${section.id}"], .section-category .data-fade-list-item`
-    );
-    if (!link) return;
+  const sections = document.querySelectorAll("section[id]");
+  const items = document.querySelectorAll(
+    ".category-tab .category-item, .section-category .data-fade-list-item"
+  );
 
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: "bottom top",
-      onEnter: () => {
-        document
-          .querySelectorAll('.category-tab .category-item[href^="#"]')
-          .forEach((a) => a.classList.remove("active"));
-        link.classList.add("active");
-      },
-      onEnterBack: () => {
-        document
-          .querySelectorAll('#header a[href^="#"]')
-          .forEach((a) => a.classList.remove("active"));
+  // Map section → link
+  const sectionMap = {};
+  items.forEach((a) => {
+    const href = a.getAttribute("href");
+    if (!href) return;
+
+    const id = href.split("#")[1]; // get sectionID
+
+    if (id) {
+      sectionMap[id] = a; // store mapping
+    }
+  });
+
+  // Intersection Observer Options
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px 0px -60% 0px", // 40% from top (giống start: "top 40%")
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        const link = sectionMap[id];
+        if (!link) return;
+
+        // remove active
+        items.forEach((a) => a.classList.remove("active"));
         link.classList.add("active");
       }
     });
-  });
+  }, observerOptions);
+
+  // Observe all sections
+  sections.forEach((section) => observer.observe(section));
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth > 991) return;
+
+  const stickyEls = document.querySelectorAll(
+    ".category-tab, .section-category"
+  );
+
+  stickyEls.forEach((el) => {
+    const parent = el.parentElement; // phần tử cha chứa sticky
+    const elHeight = el.offsetHeight;
+
+    window.addEventListener("scroll", () => {
+      const rect = el.getBoundingClientRect();
+      const parentRect = parent.getBoundingClientRect();
+
+      // Khi sticky: top của element = 0 và bottom của parent còn > elHeight
+      if (rect.top <= 0 && parentRect.bottom > elHeight) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  });
+});
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -535,6 +577,7 @@ const init = () => {
   productCol();
   scrollToHashLink();
   activeTab();
+  activeBorderTabMobile();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

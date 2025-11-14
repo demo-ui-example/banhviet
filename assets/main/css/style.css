@@ -318,7 +318,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 7px 10px 4px;
   height: 28px;
-  border-radius: 5px;
+  border-radius: 8px;
   width: max-content;
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
@@ -982,6 +982,12 @@ body {
   font-size: 14px;
   line-height: 100%;
 }
+@media (max-width: 991px) {
+  .footer-right .form input {
+    height: 45px;
+    border-radius: 8px;
+  }
+}
 .footer-right .form input::placeholder {
   color: var(--color-text-2);
 }
@@ -1167,11 +1173,11 @@ body {
   padding: 8px;
   position: relative;
 }
-.section-category .list-item .data-fade-list-item:hover img {
+.section-category .list-item .data-fade-list-item:hover img, .section-category .list-item .data-fade-list-item.active img {
   opacity: 0;
   visibility: hidden;
 }
-.section-category .list-item .data-fade-list-item:hover img:nth-child(2) {
+.section-category .list-item .data-fade-list-item:hover img:nth-child(2), .section-category .list-item .data-fade-list-item.active img:nth-child(2) {
   opacity: 1;
   visibility: visible;
 }

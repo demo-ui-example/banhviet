@@ -166,6 +166,11 @@
         font-size: 14px;
         line-height: 100%;
 
+        @media (max-width: 991px) {
+          height: 45px;
+          border-radius: 8px;
+        }
+
         &::placeholder {
           color: var(--color-text-2);
         }

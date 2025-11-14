@@ -30,7 +30,8 @@
       padding: 8px;
       position: relative;
 
-      &:hover {
+      &:hover,
+      &.active {
         img {
           opacity: 0;
           visibility: hidden;
