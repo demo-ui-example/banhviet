@@ -76,10 +76,18 @@
     h1 {
       font-family: var(--font-body);
       font-weight: 800;
+
+      @media (max-width: 991px) {
+        font-size: 37px;
+      }
     }
 
     .desc {
       margin-top: 16px;
+
+      @media (max-width: 991px) {
+        margin-top: 4px;
+      }
     }
 
     .desc-more {
@@ -121,7 +129,7 @@
 
   .swiper-pagination {
     display: flex;
-    gap: 12px;
+    gap: 11px;
     position: absolute;
     width: max-content;
     bottom: 24px;
@@ -130,16 +138,16 @@
     margin: 0;
 
     .swiper-pagination-bullet {
-      width: 12px;
-      border-radius: 12px;
-      height: 3px;
       background-color: var(--color-white);
       transition: all 0.3s ease;
       margin: 0;
       opacity: 1;
+      width: 4px;
+      height: 4px;
+      border-radius: 100px;
 
       &.swiper-pagination-bullet-active {
-        width: 26px;
+        width: 44px;
         background-color: var(--color-white);
       }
     }

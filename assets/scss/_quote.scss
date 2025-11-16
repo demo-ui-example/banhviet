@@ -4,6 +4,7 @@
   background: url("../../images/draf/about/bg-quote.webp");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 
   @media (max-width: 991px) {
     padding: 48px 24px;

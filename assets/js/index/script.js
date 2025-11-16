@@ -2,13 +2,13 @@ import { preloadImages } from "../../libs/utils.js";
 ("use strict");
 $ = jQuery;
 // setup lenis
-const lenis = new Lenis();
-lenis.on("scroll", ScrollTrigger.update);
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
+// const lenis = new Lenis();
+// lenis.on("scroll", ScrollTrigger.update);
+// gsap.ticker.add((time) => {
+//   lenis.raf(time * 1000);
+// });
 
-gsap.ticker.lagSmoothing(0);
+// gsap.ticker.lagSmoothing(0);
 // end lenis
 
 function introProducts() {
@@ -140,7 +140,10 @@ function banner() {
 function scrollToTop() {
   $(".back-to-top").on("click", function (e) {
     e.preventDefault();
-    lenis.scrollTo(0, { offset: 0, duration: 0.8, easing: (t) => t });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
 }
 
@@ -416,15 +419,15 @@ function header() {
     els.toggleClass("active");
 
     if (els.hasClass("active")) {
-      lenis.stop();
+      $("body").addClass("overflow-hidden");
     } else {
-      lenis.start();
+      $("body").removeClass("overflow-hidden");
     }
   });
 
   $("#header .header-backdrop").on("click", () => {
     els.removeClass("active");
-    lenis.start();
+    $("body").removeClass("overflow-hidden");
   });
 }
 

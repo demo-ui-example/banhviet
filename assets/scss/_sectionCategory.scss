@@ -66,6 +66,11 @@
           height: calc(100% - 16px);
           opacity: 0;
           visibility: hidden;
+
+          @media (max-width: 991px) {
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+          }
         }
       }
 
