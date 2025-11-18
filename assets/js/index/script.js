@@ -288,14 +288,15 @@ function animation() {
 }
 
 function getNewletter() {
-  $("#form-newletter").on("submit", function (e) {
+  $("#form-newsletter").on("submit", function (e) {
     e.preventDefault();
+
+    console.log("submit");
 
     const thisForm = $(this);
     const emailField = thisForm.find("input[type='email']");
 
     emailField.removeClass("error");
-    thisForm.siblings("span").remove();
 
     if (!emailField.length) {
       console.error("Không tìm thấy input email trong form.");
@@ -313,17 +314,17 @@ function getNewletter() {
       type: "POST",
       url: ajaxUrl,
       data: {
-        action: "vias_receive_newletter",
+        action: "bv_receive_newletter",
         email: email
       },
       beforeSend: function () {
-        console.log("Đang gửi dữ liệu...");
+        thisForm.find("button[type='submit']").addClass("adloading");
       },
       success: function (res) {
         thisForm[0].reset();
-        thisForm.addClass("d-none");
+        thisForm.find("button[type='submit']").removeClass("adloading");
         thisForm.after(
-          '<span class="contact-message b3-font d-block color-white" style=" max-width: 235px; margin-top: 16px;">We have received your information, thank you for registering.</span>'
+          '<span class="contact-message b1-font d-block color-white"">Thông tin của bạn đã được gửi, cảm ơn bạn đã đăng ký.</span>'
         );
 
         setTimeout(() => {
@@ -441,25 +442,27 @@ function productCol() {
 
     if (parent) {
       const colClass = [...parent.classList].find((c) => c.startsWith("col--"));
-
       if (colClass) {
         perView = parseInt(colClass.replace("col--", "")) || 1;
       }
-
       if (perView == 1) {
-        gap = 0;
+        gap = 10;
       }
     }
 
+    const paginationEl = swiperEl.querySelector(".swiper-pagination");
+
     new Swiper(swiperEl, {
       slidesPerView: perView,
-      spaceBetween: gap,
+      spaceBetween: 10,
       loop: true,
       speed: 800,
-      pagination: {
-        el: swiperEl.querySelector(".swiper-pagination"),
-        clickable: true
-      },
+      pagination: paginationEl
+        ? {
+            el: paginationEl,
+            clickable: true
+          }
+        : null,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false
@@ -467,7 +470,7 @@ function productCol() {
       breakpoints: {
         0: {
           slidesPerView: 1,
-          spaceBetween: 0
+          spaceBetween: 10
         },
         991: {
           slidesPerView: perView,
@@ -544,6 +547,82 @@ function activeTab() {
   sections.forEach((section) => observer.observe(section));
 }
 
+function customDropdown() {
+  const dropdowns = document.querySelectorAll(".dropdown-custom");
+
+  dropdowns.forEach((dropdown) => {
+    const btnDropdown = dropdown.querySelector(".dropdown-custom-btn");
+    const dropdownMenu = dropdown.querySelector(".dropdown-custom-menu");
+    const dropdownItems = dropdown.querySelectorAll(".dropdown-custom-item");
+    const valueSelect = dropdown.querySelector(".value-select");
+
+    // Toggle dropdown on button click
+    btnDropdown.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeAllDropdowns(dropdown);
+      dropdownMenu.classList.toggle("dropdown--active");
+      btnDropdown.classList.toggle("--active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function () {
+      closeAllDropdowns();
+    });
+
+    // Handle item selection
+    dropdownItems.forEach((item) => {
+      item.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        // Store current values from the button
+        const currentImgEl = valueSelect.querySelector("img");
+        const currentImg = currentImgEl ? currentImgEl.src : "";
+        const currentText = valueSelect.querySelector("span").textContent;
+        const currentHtml = valueSelect.innerHTML;
+
+        // Store clicked item values
+        const clickedHtml = item.innerHTML;
+
+        // Update the button with clicked item values
+        valueSelect.innerHTML = clickedHtml;
+
+        const isSelectTime = currentText.trim() === "Time";
+
+        // Update the clicked item with the previous button values
+        if (!isSelectTime) {
+          if (currentImg) {
+            item.innerHTML = `<img src="${currentImg}" alt="" /><span>${currentText}</span>`;
+          } else {
+            item.innerHTML = `<span>${currentText}</span>`;
+          }
+        }
+
+        closeAllDropdowns();
+      });
+    });
+
+    // Close dropdown on scroll
+    window.addEventListener("scroll", function () {
+      if (dropdownMenu.closest(".header-lang")) {
+        dropdownMenu.classList.remove("dropdown--active");
+        btnDropdown.classList.remove("--active");
+      }
+    });
+  });
+
+  function closeAllDropdowns(exception) {
+    dropdowns.forEach((dropdown) => {
+      const menu = dropdown.querySelector(".dropdown-custom-menu");
+      const btn = dropdown.querySelector(".dropdown-custom-btn");
+
+      if (!exception || dropdown !== exception) {
+        menu.classList.remove("dropdown--active");
+        btn.classList.remove("--active");
+      }
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth > 991) return;
 
@@ -584,6 +663,8 @@ const init = () => {
   productCol();
   scrollToHashLink();
   activeTab();
+  customDropdown();
+  getNewletter();
 };
 preloadImages("img").then(() => {
   // Once images are preloaded, remove the 'loading' indicator/class from the body

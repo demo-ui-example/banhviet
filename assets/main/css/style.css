@@ -124,7 +124,7 @@ body,
 
 .tag-r {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 18px;
   font-weight: 400;
 }
 
@@ -254,58 +254,6 @@ body {
 .dropdown-custom {
   position: relative;
   cursor: pointer;
-}
-
-.dropdown-custom-menu {
-  position: absolute;
-  bottom: -29px;
-  left: -16px;
-  transform: translateY(100%);
-  background-color: var(--color-white);
-  width: 120px;
-  padding: 8px;
-  clip-path: inset(0 0 100% 0);
-  will-change: clip-path;
-  transition: clip-path 0.3s ease;
-  pointer-events: none;
-}
-.dropdown-custom-menu.dropdown--active {
-  clip-path: inset(0 0 0 0);
-  pointer-events: auto;
-}
-
-.dropdown-custom-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.dropdown-custom-btn .value-select {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.dropdown-custom-btn .value-select span {
-  color: var(--color-primary);
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 600;
-}
-
-.dropdown-custom-item {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  padding: 8px;
-  transition: all 0.3s ease;
-}
-.dropdown-custom-item:hover {
-  background-color: rgba(23, 75, 156, 0.1);
-}
-.dropdown-custom-item span {
-  color: var(--color-primary);
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 600;
 }
 
 .btn--primary {
@@ -521,6 +469,10 @@ body {
   height: 50px;
   display: none;
 }
+#header.is-home {
+  position: sticky;
+  top: 0;
+}
 
 .header-logo {
   width: 140px;
@@ -544,7 +496,7 @@ body {
 .header-menu {
   display: flex;
   align-items: center;
-  gap: 56px;
+  gap: 35px;
 }
 @media (max-width: 991px) {
   .header-menu {
@@ -554,9 +506,9 @@ body {
     width: 100%;
     height: 100dvh;
     background-color: #f5f5f7;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
     clip-path: inset(0 0 0 100%);
     transition: clip-path 0.5s ease;
     z-index: 10;
@@ -579,6 +531,7 @@ body {
     width: 100%;
     gap: 0;
     padding: 0 24px;
+    order: 2;
   }
 }
 @media (max-width: 991px) {
@@ -622,6 +575,7 @@ body {
 @media (max-width: 991px) {
   .header-cta {
     width: 100%;
+    order: 1;
   }
 }
 .header-cta__search {
@@ -834,6 +788,100 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
+.header-lang {
+  width: 73px;
+}
+@media (max-width: 991px) {
+  .header-lang {
+    order: 3;
+    margin: 24px 24px 0 auto;
+  }
+}
+.header-lang .dropdown-custom {
+  position: relative;
+  cursor: pointer;
+}
+.header-lang .dropdown-custom-menu {
+  position: absolute;
+  bottom: -18px;
+  left: -16px;
+  transform: translateY(100%);
+  background-color: var(--color-primary);
+  width: 100px;
+  padding: 8px;
+  clip-path: inset(0 0 100% 0);
+  will-change: clip-path;
+  transition: clip-path 0.3s ease;
+  pointer-events: none;
+}
+@media (max-width: 991px) {
+  .header-lang .dropdown-custom-menu {
+    bottom: -17px;
+    width: 90px;
+  }
+}
+.header-lang .dropdown-custom-menu.dropdown--active {
+  clip-path: inset(0 0 0 0);
+  pointer-events: auto;
+}
+.header-lang .dropdown-custom-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-lang .dropdown-custom-btn .value-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-lang .dropdown-custom-btn .value-select span {
+  color: var(--color-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  display: block;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .header-lang .dropdown-custom-btn .value-select span {
+    color: #414042;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.header-lang .dropdown-custom-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+.header-lang .dropdown-custom-item:hover span {
+  color: var(--color-white);
+}
+@media (max-width: 991px) {
+  .header-lang .dropdown-custom-item:hover span {
+    color: #414042;
+  }
+}
+.header-lang .dropdown-custom-item span {
+  color: var(--color-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+@media (max-width: 991px) {
+  .header-lang .dropdown-custom-item span {
+    color: #414042;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.header-lang .dropdown-custom-item img {
+  width: 20px;
+  height: 15px;
+}
 
 #footer {
   background-color: var(--color-primary);
@@ -984,6 +1032,12 @@ body {
   font-size: 14px;
   line-height: 100%;
 }
+.footer-right .form input.error {
+  color: red;
+}
+.footer-right .form input.error::placeholder {
+  color: red;
+}
 @media (max-width: 991px) {
   .footer-right .form input {
     height: 45px;
@@ -1007,6 +1061,9 @@ body {
 .footer-right .form button:hover .icon {
   color: var(--color-white);
 }
+.footer-right .form button.aloading {
+  pointer-events: none;
+}
 
 .banner {
   height: calc(100dvh - 55px);
@@ -1018,7 +1075,7 @@ body {
 }
 @media (max-width: 767px) {
   .banner {
-    height: 540px;
+    height: 600px;
   }
 }
 .banner.is-home {
@@ -1026,7 +1083,7 @@ body {
 }
 @media (max-width: 767px) {
   .banner.is-home {
-    height: 540px;
+    height: 600px;
   }
 }
 .banner.is-home .swiper-slide {
@@ -1034,7 +1091,7 @@ body {
 }
 @media (max-width: 767px) {
   .banner.is-home .swiper-slide {
-    height: 540px;
+    height: 600px;
   }
 }
 .banner.banner-short {
@@ -1123,7 +1180,7 @@ body {
 }
 @media (max-width: 767px) {
   .banner .swiper-slide {
-    height: 540px;
+    height: 600px;
   }
 }
 .banner .swiper-slide img {
@@ -1162,7 +1219,6 @@ body {
   z-index: 10;
   top: 0;
   margin: 48px 0;
-  transition: border 0.4s ease;
 }
 @media (max-width: 991px) {
   .section-category.active {
@@ -1421,6 +1477,7 @@ body {
 }
 .section-news .search-top {
   margin-bottom: 32px;
+  gap: 16px;
 }
 .section-news h2.title {
   margin-bottom: 56px;
@@ -1458,6 +1515,16 @@ body {
   .section-news .list-item .news-item {
     width: 100%;
   }
+}
+.section-news.page-search {
+  min-height: 50dvh;
+}
+.section-news.page-search .news-item .date {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .news-item {
@@ -1516,7 +1583,7 @@ body {
   width: 100%;
   margin: 0 auto;
   height: 400px;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

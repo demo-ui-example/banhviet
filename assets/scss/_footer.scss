@@ -166,6 +166,14 @@
         font-size: 14px;
         line-height: 100%;
 
+        &.error {
+          color: red;
+
+          &::placeholder {
+            color: red;
+          }
+        }
+
         @media (max-width: 991px) {
           height: 45px;
           border-radius: 8px;
@@ -189,6 +197,10 @@
           .icon {
             color: var(--color-white);
           }
+        }
+
+        &.aloading {
+          pointer-events: none;
         }
       }
     }
