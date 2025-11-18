@@ -19,6 +19,7 @@ body {
 body,
 * {
   font-family: var(--font-body);
+  cursor: none !important;
 }
 
 .color-primary {
@@ -453,6 +454,66 @@ body {
   width: 44px;
   background-color: #414042;
   border-radius: 20px;
+}
+
+.magic-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1061;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+@media (max-width: 991px) {
+  .magic-cursor {
+    display: none;
+  }
+}
+.magic-cursor.scale-in .cursor {
+  width: 40px;
+  height: 40px;
+}
+.magic-cursor.scale-in .cursor.active {
+  width: 40px;
+  height: 40px;
+}
+.magic-cursor.scale-in .cursor img {
+  opacity: 0;
+}
+.magic-cursor.scale-in .cursor img.click {
+  opacity: 1;
+}
+.magic-cursor .cursor {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.magic-cursor .cursor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  inset: 0;
+}
+.magic-cursor .cursor img.active, .magic-cursor .cursor img.hover {
+  opacity: 0;
+}
+.magic-cursor .cursor.active img {
+  opacity: 0;
+}
+.magic-cursor .cursor.active img.hover {
+  opacity: 1;
+}
+
+[data-cursor-text] {
+  cursor: none;
 }
 
 #header {
