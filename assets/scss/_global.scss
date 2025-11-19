@@ -313,6 +313,7 @@
     }
 
     &.active {
+      transform: rotate(-20deg);
       img {
         opacity: 0;
 

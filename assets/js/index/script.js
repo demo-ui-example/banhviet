@@ -671,7 +671,9 @@ function magicCursor() {
     });
   });
 
-  const items = document.querySelectorAll("[data-cursor-text],a[href]");
+  const items = document.querySelectorAll(
+    "[data-cursor-text],a[href], .back-to-top, button"
+  );
   var cursorDot = document.querySelector(".magic-cursor .cursor");
 
   items.forEach((item) => {

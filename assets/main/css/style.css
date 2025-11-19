@@ -505,6 +505,9 @@ body {
 .magic-cursor .cursor img.active, .magic-cursor .cursor img.hover {
   opacity: 0;
 }
+.magic-cursor .cursor.active {
+  transform: rotate(-20deg);
+}
 .magic-cursor .cursor.active img {
   opacity: 0;
 }
