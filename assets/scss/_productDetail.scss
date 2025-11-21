@@ -357,9 +357,16 @@
         &:not(:first-child) {
           position: absolute;
           width: calc(100% - 80px);
-          height: calc(100% - 200px);
+          height: calc(100% - 190px);
           top: 40px;
           left: 40px;
+
+          @media (max-width: 991px) {
+            width: calc(100% - 48px);
+            height: calc(100% - 80px);
+            top: 24px;
+            left: 24px;
+          }
         }
       }
     }

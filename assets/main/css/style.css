@@ -2852,9 +2852,17 @@ body {
 .product-detail__main .gallery-item:not(:first-child) {
   position: absolute;
   width: calc(100% - 80px);
-  height: calc(100% - 200px);
+  height: calc(100% - 190px);
   top: 40px;
   left: 40px;
+}
+@media (max-width: 991px) {
+  .product-detail__main .gallery-item:not(:first-child) {
+    width: calc(100% - 48px);
+    height: calc(100% - 80px);
+    top: 24px;
+    left: 24px;
+  }
 }
 .product-detail__main .variant {
   display: grid;
