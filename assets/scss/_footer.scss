@@ -4,7 +4,7 @@
 
 .footer {
   &-container {
-    padding: 64px 160px;
+    padding: 64px 140px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
@@ -36,7 +36,7 @@
 
       &.name {
         font-size: 14px;
-        line-height: 18px;
+        line-height: 20px;
         font-weight: 800;
 
         @media (max-width: 767px) {
@@ -47,7 +47,7 @@
       &.address {
         font-weight: 300;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 20px;
       }
     }
   }

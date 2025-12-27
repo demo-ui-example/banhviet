@@ -30,11 +30,23 @@
       margin-right: 200px;
       border-radius: 20px;
       background-color: rgba($color: #fff, $alpha: 0.6);
-      padding-right: 50%;
+      padding-right: 40%;
 
       display: flex;
       flex-direction: column;
       gap: 24px;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        font-family: var(--font-body);
+      }
 
       .note {
         margin-top: auto;
@@ -53,7 +65,7 @@
 
     &-image {
       height: auto;
-      width: 414px;
+      width: 600px;
       aspect-ratio: 414 / 564;
       position: absolute;
       bottom: 0;

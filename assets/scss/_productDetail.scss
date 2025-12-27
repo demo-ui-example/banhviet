@@ -47,7 +47,7 @@
 
     .desc {
       font-size: 14px;
-      line-height: 18px;
+      line-height: 20px;
       max-width: 700px;
       margin: 48px auto 0;
 
@@ -55,7 +55,10 @@
         margin-top: 12px;
       }
 
-      h4 {
+      h4,
+      h3,
+      h5,
+      h2 {
         font-size: 20px;
         line-height: 24px;
       }
@@ -71,8 +74,9 @@
     grid-template-columns: 40% 60%;
     background-color: var(--color-white);
     border-radius: 20px;
-    padding: 64px 185px;
+    padding: 80px 185px;
     box-shadow: 0 0 30px 4px rgba(117, 117, 117, 0.2);
+    min-height: 520px;
 
     @media (max-width: 991px) {
       width: calc(100% - 48px);
@@ -104,6 +108,18 @@
 
     .content {
       width: 70%;
+
+      h2 {
+        margin-bottom: 32px;
+
+        @media (max-width: 991px) {
+          margin-bottom: 24px;
+        }
+      }
+
+      strong {
+        font-weight: 800;
+      }
 
       @media (max-width: 991px) {
         width: 100%;
@@ -142,22 +158,27 @@
     }
 
     .different {
-      padding: 24px 30px;
+      padding: 40px;
       border-radius: 20px;
       background-color: var(--color-white);
       // box-shadow: 0 0 10px 2px rgba(117, 117, 117, 0.2);
       width: 30%;
       // height: 100%;
 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
       @media (max-width: 991px) {
         width: 100%;
+        padding: 24px;
       }
 
       .list-item {
-        margin-top: 24px;
+        margin-top: 80px;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 24px;
 
         li {
           display: flex;
@@ -393,7 +414,7 @@
 
     /* --- Slider main --- */
     .mySwiper2 {
-      width: 70%;
+      width: calc(100% - 152px);
       aspect-ratio: 1;
       border-radius: 20px;
       overflow: hidden;

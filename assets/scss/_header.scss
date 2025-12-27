@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 13px 160px;
+    padding: 13px 140px;
 
     @media (max-width: 991px) {
       padding: 13px 24px;
@@ -373,7 +373,7 @@
   }
 
   &-lang {
-    width: 73px;
+    width: 40px;
 
     @media (max-width: 991px) {
       order: 3;
@@ -390,7 +390,7 @@
       left: -16px;
       transform: translateY(100%);
       background-color: var(--color-primary);
-      width: 100px;
+      width: 60px;
       padding: 8px;
       clip-path: inset(0 0 100% 0);
       will-change: clip-path;
@@ -398,7 +398,7 @@
       pointer-events: none;
       @media (max-width: 991px) {
         bottom: -17px;
-        width: 90px;
+        // width: 90px;
       }
       &.dropdown--active {
         clip-path: inset(0 0 0 0);
@@ -413,6 +413,10 @@
         display: flex;
         align-items: center;
         gap: 10px;
+
+        img {
+          display: none;
+        }
 
         span {
           color: var(--color-secondary);
@@ -436,6 +440,11 @@
       align-items: center;
       padding: 8px;
       transition: all 0.3s ease;
+
+      img {
+        display: none;
+      }
+
       &:hover {
         span {
           color: var(--color-white);

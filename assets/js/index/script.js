@@ -18,7 +18,11 @@ function introProducts() {
     slidesPerView: 5,
     spaceBetween: 24,
     loop: true,
-    speed: 600,
+    speed: 800,
+    pagination: {
+      el: ".product-featured-swiper .swiper-pagination"
+    },
+    autoplay: true,
     navigation: {
       nextEl: ".products-swiper .arrow-next",
       prevEl: ".products-swiper .arrow-prev"
@@ -688,11 +692,13 @@ function magicCursor() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.innerWidth > 991) return;
+  // if (window.innerWidth > 991) return;
 
   const stickyEls = document.querySelectorAll(
     ".category-tab, .section-category"
   );
+
+  if (stickyEls.length < 1) return;
 
   stickyEls.forEach((el) => {
     const parent = el.parentElement; // phần tử cha chứa sticky

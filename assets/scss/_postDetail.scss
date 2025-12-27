@@ -1,7 +1,7 @@
 .post-detail {
   .detail {
     &-banner {
-      height: 340px;
+      height: 520px;
       width: 100%;
 
       img {
@@ -44,6 +44,9 @@
 
       .content {
         width: 60%;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
 
         @media (max-width: 991px) {
           width: 100%;
@@ -61,13 +64,16 @@
 
         h1,
         h2,
-        h3 {
-          font-size: 44px;
-          line-height: 52px;
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: 20px;
+          line-height: 24px;
           font-weight: 400;
-          font-family: var(--font-heading);
-          color: var(--color-primary);
-          margin-bottom: 24px;
+          font-family: var(--font-body);
+          margin-top: 24px;
+          margin-bottom: 8px;
         }
 
         ul {

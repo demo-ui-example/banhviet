@@ -41,11 +41,15 @@
 
     .name {
       position: absolute;
-      top: 24px;
+      top: 64px;
       width: 90%;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
+
+      @media (max-width: 991px) {
+        top: 24px;
+      }
     }
   }
 }

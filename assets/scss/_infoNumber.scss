@@ -2,6 +2,25 @@
   padding: 80px;
   background-color: var(--color-white);
 
+  &.has-border-top {
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: calc(100% - 160px);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-primary);
+
+      @media (max-width: 991px) {
+        width: calc(100% - 48px);
+      }
+    }
+  }
+
   @media (max-width: 991px) {
     padding: 48px 24px;
   }
